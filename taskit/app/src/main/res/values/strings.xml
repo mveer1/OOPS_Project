@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">task.it</string>
+    <string name="default_web_client_id" translatable="false">881385818853-k22l0s3afllnjko46buh77c76jmaj7h2.apps.googleusercontent.com</string>
 </resources>

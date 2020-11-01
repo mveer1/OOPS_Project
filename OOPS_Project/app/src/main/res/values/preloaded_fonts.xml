@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amaranth</item>
+        <item>@font/exo</item>
+        <item>@font/exo_extrabold</item>
+        <item>@font/exo_medium</item>
+        <item>@font/exo_thin</item>
+        <item>@font/orbitron</item>
+    </array>
+</resources>

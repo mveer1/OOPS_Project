@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/logo5"
         android:supportsRtl="true"
         android:theme="@style/Theme.Taskit">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".blank"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>
