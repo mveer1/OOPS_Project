@@ -28,6 +28,7 @@
         android:layout_height="63dp"
         android:fontFamily="@font/exo_medium"
         android:text="Login"
+        android:onClick="to_login"
         android:textSize="18sp"
         app:backgroundTint="#ffcc26"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.046"/>
 
     <TextView
         android:id="@+id/textView2"
