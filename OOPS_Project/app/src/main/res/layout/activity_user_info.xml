@@ -4,49 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/lightpage"
     tools:context=".user_info">
 
     <TextView
         android:id="@+id/user_info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Information"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/user_name"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/exo_extrabold"
+        android:text="User Info"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/user_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        android:layout_marginTop="36dp"
+        android:drawableStart="@drawable/ic_baseline_engineering_24"
+        android:drawableTint="#7E7E7E"
+        android:ems="10"
+        android:fontFamily="@font/exo_medium"
+        android:inputType="textPersonName"
+        android:text="Profession"
+        android:textColor="#7E7E7E"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        tools:layout_editor_absoluteX="68dp" />
 
-    <TextView
-        android:id="@+id/user_email"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableStart="@android:drawable/stat_sys_phone_call"
+        android:drawableTint="#7E7E7E"
+        android:ems="10"
+        android:fontFamily="@font/exo_medium"
+        android:hint="Contact"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        tools:layout_editor_absoluteY="189dp" />
 
     <Button
         android:id="@+id/logout_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"
+        android:layout_marginBottom="212dp"
+        android:backgroundTint="#FF2B2B"
+        android:fontFamily="@font/exo"
+        android:text="Next"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_email"
-        app:layout_constraintVertical_bias="0.385" />
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,8 +39,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:26.0.0')   //Using Bill of materials
     implementation 'com.google.firebase:firebase-analytics'   //firebase analytics
     implementation 'com.google.firebase:firebase-auth'   //firebase authentication
-    implementation 'com.google.firebase:firebase-storage'  //firebase cloudstorage
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'androidx.wear:wear:1.1.0'//firebase cloudstorage
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    compileOnly 'com.google.android.wearable:wearable:2.8.1'
 }
