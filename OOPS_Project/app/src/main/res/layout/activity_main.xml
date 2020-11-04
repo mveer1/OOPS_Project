@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#3EFFFFFF"
         android:text="Register"
+        android:onClick="to_register"
         android:textColor="#FF2B2B"
         app:backgroundTint="#FFFFFF"
         app:elevation="0dp"

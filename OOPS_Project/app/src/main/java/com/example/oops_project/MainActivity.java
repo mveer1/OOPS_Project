@@ -37,7 +37,19 @@ public class MainActivity extends AppCompatActivity{
 
 
     public void to_login(View view) {
-        Intent intent = new Intent(getApplicationContext(), Login.class);
-        startActivity(intent);
+
+        GoogleSignInAccount lastSignedInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if(lastSignedInAccount==null){
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(getApplicationContext(), user_info.class);
+            startActivity(intent);
+        }
+
+    }
+
+    public void to_register(View view) {
+        startActivity(new Intent(MainActivity.this, MainActivity2.class));
     }
 }

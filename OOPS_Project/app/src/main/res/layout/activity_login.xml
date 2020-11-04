@@ -76,6 +76,7 @@
         android:layout_marginTop="316dp"
         android:fontFamily="@font/exo"
         android:text="Login"
+        android:onClick="login_user"
         app:backgroundTint="#FF2B2B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
