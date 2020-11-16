@@ -13,11 +13,13 @@ import android.widget.Toast;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class user_info extends AppCompatActivity {
 
     TextView name, email;
     Button logout;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class user_info extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(user_info.this, MainActivity2.class));
             }
         });
 
@@ -64,7 +66,12 @@ public class user_info extends AppCompatActivity {
     }
 
     public void toMain(View view) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(user_info.this, Login.class));
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseAuth = FirebaseAuth.getInstance();
+        if(firebaseUser!=null){
+            firebaseAuth.signOut();
+            startActivity(new Intent(user_info.this, MainActivity.class));
+        }
+
     }
 }

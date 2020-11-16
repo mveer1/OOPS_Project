@@ -37,11 +37,11 @@ public class Login extends AppCompatActivity {
 
     GoogleSignInClient mGoogleSignInClient;
     SignInButton signInButton;
-    private FirebaseAuth mAuth;
+     FirebaseAuth mAuth;
     CallbackManager mCallbackManager;
-    private LoginButton loginButton;
+    LoginButton loginButton;
     EditText t1, t2;
-    private String email, password;
+    String email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

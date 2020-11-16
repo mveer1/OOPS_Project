@@ -26,20 +26,31 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class MainActivity extends AppCompatActivity{
 
+    private FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+        if(firebaseUser!=null){
+            startActivity(new Intent(MainActivity.this, user_info.class));
+        }
+    }
 
     public void to_login(View view) {
 
-        GoogleSignInAccount lastSignedInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        if(lastSignedInAccount==null){
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+        if(firebaseUser==null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
         }else{
