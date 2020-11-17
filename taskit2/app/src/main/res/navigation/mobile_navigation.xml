@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_stocks">
+
+    <fragment
+        android:id="@+id/nav_stocks"
+        android:name="com.example.taskit2.ui.home.HomeFragment"
+        android:label="Stocks"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_todo"
+        android:name="com.example.taskit2.ui.gallery.GalleryFragment"
+        android:label="TO-DO"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/maintainance"
+        android:name="com.example.taskit2.fragment_maintainance"
+        android:label="Maintainance"
+        tools:layout="@layout/fragment_maintainance" />
+
+    <fragment
+        android:id="@+id/nav_HomeAppliance"
+        android:name="com.example.taskit2.application"
+        android:label="Home Appliances"
+        tools:layout="@layout/fragment_application" />
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.example.taskit2.notes"
+        android:label="Notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/nav_myAccount"
+        android:name="com.example.taskit2.ui.slideshow.SlideshowFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_contactUs"
+        android:name="com.example.taskit2.contactus"
+        android:label="About Us"
+        tools:layout="@layout/fragment_contactus" />
+</navigation>

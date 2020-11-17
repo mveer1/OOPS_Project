@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E7E7E"
+    tools:context=".contactus">
+
+    <TextView
+        android:id="@+id/content_contactus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Garvit-78 Mahavir-088 kshitij-105 rishabh-124"
+        android:textSize="150sp" />
+</androidx.core.widget.NestedScrollView>
