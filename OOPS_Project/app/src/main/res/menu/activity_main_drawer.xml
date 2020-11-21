@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <!--    android:background="#7e7e7e">-->
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stocks"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="Stocks" />
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/ic_baseline_view_list_24"
+            android:title="To-do" />
+        <item
+            android:id="@+id/maintainance"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Maintainance" />
+        <item
+            android:id="@+id/nav_HomeAppliance"
+            android:icon="@drawable/ic_baseline_tv_24"
+            android:title="Home Appliance" />
+
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_baseline_sticky_note_2_24"
+            android:title="Notes" />
+
+        <item
+            android:id="@+id/nav_myAccount"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="My Account" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:icon="@android:drawable/stat_sys_phone_call"
+            android:title="Contact Us" />
+
+    </group>
+</menu>
