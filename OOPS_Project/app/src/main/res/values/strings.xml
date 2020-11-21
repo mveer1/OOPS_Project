@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OOPS_Project</string>
+    <string name="app_name">task.it</string>
     <string name="facebook_app_id">2901126866832238</string>
     <string name="fb_login_protocol_scheme">fb2901126866832238</string>
     <string name="title_activity_verification">verification</string>
