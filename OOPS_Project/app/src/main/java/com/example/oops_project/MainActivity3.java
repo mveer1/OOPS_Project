@@ -1,8 +1,10 @@
 package com.example.oops_project;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -15,18 +17,33 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity3 extends AppCompatActivity {
+
+    RecyclerView myRecyclerView;
+
+    String s1[],s2[];
+    int image[]={R.drawable.logo2,R.drawable.logo2,R.drawable.logo2,R.drawable.logo2};
 
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TextView link;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+        s1=getResources().getStringArray(R.array.team);
+        s2=getResources().getStringArray(R.array.teamid);
+        myRecyclerView=findViewById(R.id.myRecyclerView);
+
+        link = findViewById(R.id.textView12);
+        link.setMovementMethod(LinkMovementMethod.getInstance());
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +62,10 @@ public class MainActivity3 extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        recycleAdapter recycleAdapter=new recycleAdapter(this,s1,s2,image);
+        myRecyclerView.setAdapter(recycleAdapter);
+        myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
