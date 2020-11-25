@@ -16,19 +16,25 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string
-        name="hyperlink"><a href="https://github.com/GarvitK01/OOPS_Project">Tap to open</a></string>;
+    <string name="hyperlink"><a href="https://github.com/GarvitK01/OOPS_Project">Tap to open</a></string>
+    ;
 
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    
+
     <string-array name="team">
         <item>Garvit</item>
         <item>Mahavir</item>
         <item>Kshitij</item>
         <item>Rishabh</item>
+    </string-array>
+
+    <string-array name="prefarray">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
     </string-array>
 
     <string-array name="teamid">
@@ -37,7 +43,9 @@
         <item>2019A7PS0105H</item>
         <item>2019A7PS0124H</item>
     </string-array>
-    
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="title_activity_add_note">add_note</string>
 </resources>
