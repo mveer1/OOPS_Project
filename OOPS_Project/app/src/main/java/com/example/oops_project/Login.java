@@ -98,8 +98,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
     }
 
     //Facebook
@@ -184,9 +182,14 @@ public class Login extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser user = mAuth.getCurrentUser();
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+
         if(user!=null){
             Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
             startActivity(intent);
+        }else if(isLoggedIn){
+            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
         }
     }
 
@@ -200,6 +203,7 @@ public class Login extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Message", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Message", "signInWithCredential:failure", task.getException());
@@ -235,4 +239,4 @@ public class Login extends AppCompatActivity {
     public void login_user(View view) {
         signInEmail(email, password);
     }
-}
+}               
