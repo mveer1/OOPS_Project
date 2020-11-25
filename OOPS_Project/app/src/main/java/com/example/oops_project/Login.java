@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
 
     GoogleSignInClient mGoogleSignInClient;
     SignInButton signInButton;
-     FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
     EditText t1, t2;
@@ -135,8 +135,6 @@ public class Login extends AppCompatActivity {
                 });
     }
 
-
-
     ///GOOGLE
     private void createRequest(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -187,7 +185,7 @@ public class Login extends AppCompatActivity {
 
         FirebaseUser user = mAuth.getCurrentUser();
         if(user!=null){
-            Intent intent = new Intent(getApplicationContext(), user_info.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
             startActivity(intent);
         }
     }
