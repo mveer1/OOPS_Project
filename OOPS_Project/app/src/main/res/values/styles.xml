@@ -1,0 +1,37 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/primaryLightColor</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/primaryLightColor</item>
+        <item name="colorControlHighlight">@color/primaryLightColor</item>
+    </style>
+
+    <style name="MyHintStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/primaryLightColor</item>
+    </style>
+
+    <style name="AlertDialogCustom">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/dialogueBtn</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/modeColor</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Positive</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="rippleColor">@color/primaryLightColor</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
