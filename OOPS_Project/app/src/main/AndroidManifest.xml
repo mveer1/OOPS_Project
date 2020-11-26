@@ -44,6 +44,7 @@
         <activity android:name=".Login" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
+        <activity android:name=".AddEditNoteActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
