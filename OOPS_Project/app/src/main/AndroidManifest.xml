@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -27,8 +26,24 @@
             android:name="com.google.android.wearable.standalone"
             android:value="false" />
 
+        <activity
+            android:name=".MainActivity5"
+            android:label="@string/title_activity_main5">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity4"
+            android:label="Notes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3"
@@ -44,14 +59,19 @@
         <activity android:name=".Login" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
+        <activity android:name=".AddEditNoteActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
+        </activity> <!-- <activity android:name="com.example.oops_project.MainActivity4" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

@@ -47,14 +47,13 @@ public class MainActivity4 extends AppCompatActivity {
     NoteAdapter adapter;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-    boolean isDarkModeOn;
     MaterialAlertDialogBuilder builder;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main4);
 
         final FloatingActionButton buttonAddNote = findViewById(R.id.button_add_note);
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
@@ -226,10 +225,6 @@ public class MainActivity4 extends AppCompatActivity {
                 "sharedPrefs", MODE_PRIVATE);
         editor
                 = sharedPreferences.edit();
-        isDarkModeOn
-                = sharedPreferences
-                .getBoolean(
-                        "isDarkModeOn", false);
 
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();

@@ -48,4 +48,5 @@
         android:name="com.example.oops_project.aboutus"
         android:label="About Us"
         tools:layout="@layout/fragment_aboutus" />
+
 </navigation>
