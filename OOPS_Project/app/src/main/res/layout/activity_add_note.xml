@@ -77,7 +77,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/style_spinner"
                 android:entries="@array/prefarray"
-                android:popupBackground="@color/primaryColor" />
+                android:outlineAmbientShadowColor="#FFFFFF"
+                android:popupBackground="#FFFFFF" />
 
         </LinearLayout>
     </LinearLayout>
@@ -100,7 +101,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/exo"
             android:inputType="text"
-            android:textColor="#7E7E7E"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,7 +126,7 @@
             android:fontFamily="@font/exo"
             android:gravity="start"
             android:inputType="textMultiLine"
-            android:textColor="#7E7E7E"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
