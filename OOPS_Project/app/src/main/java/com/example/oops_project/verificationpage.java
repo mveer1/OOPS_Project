@@ -50,6 +50,9 @@ public class verificationpage extends AppCompatActivity {
                 if(!phoneNumber.getText().toString().isEmpty() && phoneNumber.getText().toString().length() == 10){
                     String phoneNum = "+" + codePicker.getSelectedCountryCode()+phoneNumber.getText().toString();
                     Log.d(TAG, "onClick: Phone No -> " + phoneNum);
+                    progressBar.setVisibility(View.VISIBLE);
+                    state.setText("Sending OTP... ");
+                    state.setVisibility(View.VISIBLE);
                     requestOTP(phoneNum);
                 }
                 else {
@@ -65,6 +68,9 @@ public class verificationpage extends AppCompatActivity {
             @Override
             public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
+                progressBar.setVisibility(View.GONE);
+                state.setVisibility(View.GONE);
+                codeEnter.setVisibility(View.VISIBLE);
                 verificationId = s;
                 token = forceResendingToken;
             }
