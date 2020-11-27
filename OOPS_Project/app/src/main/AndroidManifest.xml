@@ -56,14 +56,15 @@
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3"
             android:theme="@style/Theme.OOPS_Project.NoActionBar" />
+
         <activity android:name=".verificationpage" > <!-- <activity -->
-         android:name=".verificationpage"
-         android:label="@string/title_activity_verification">
-         <intent-filter>
-         <action android:name="android.intent.action.MAIN" />
-         <category android:name="android.intent.category.LAUNCHER" />
-         </intent-filter>
-         </activity>
+            android:name=".verificationpage"
+            android:label="@string/title_activity_verification">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Login" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
