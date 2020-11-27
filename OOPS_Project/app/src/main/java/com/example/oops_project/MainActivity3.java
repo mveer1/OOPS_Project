@@ -31,7 +31,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView link;
+        //TextView link;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -41,8 +41,8 @@ public class MainActivity3 extends AppCompatActivity {
         s2=getResources().getStringArray(R.array.teamid);
         myRecyclerView=findViewById(R.id.myRecyclerView);
 
-        link = findViewById(R.id.textView12);
-        link.setMovementMethod(LinkMovementMethod.getInstance());
+        //link = findViewById(R.id.textView12);
+        //link.setMovementMethod(LinkMovementMethod.getInstance());
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,8 +63,8 @@ public class MainActivity3 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        recycleAdapter recycleAdapter=new recycleAdapter(this,s1,s2,image);
-        myRecyclerView.setAdapter(recycleAdapter);
+        recycleAdapter RecycleAdapter=new recycleAdapter(this,s1,s2,image);
+        myRecyclerView.setAdapter(RecycleAdapter);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
