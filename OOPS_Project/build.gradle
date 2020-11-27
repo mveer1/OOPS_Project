@@ -22,6 +22,10 @@ allprojects {
             // For Room Persistence Library
             url "https://maven.google.com"
         }
+        maven {
+            //for country codes
+            url "https://jitpack.io"
+        }
     }
 }
 

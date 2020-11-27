@@ -37,6 +37,7 @@ dependencies {
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation platform('com.google.firebase:firebase-bom:26.0.0')   //Using Bill of materials
+    implementation 'com.google.firebase:firebase-auth:20.0.0'
     implementation 'com.google.firebase:firebase-analytics'   //firebase analytics
     implementation 'com.google.firebase:firebase-auth'   //firebase authentication
     implementation 'com.google.firebase:firebase-storage'
@@ -55,4 +56,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
 }
