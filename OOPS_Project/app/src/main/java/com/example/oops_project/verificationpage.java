@@ -72,7 +72,9 @@ public class verificationpage extends AppCompatActivity {
                 }
 
             }
-        });
+
+        });                  
+
 }
 
     private void verifyAuth(PhoneAuthCredential credential) {

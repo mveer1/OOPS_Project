@@ -13,37 +13,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.card.MaterialCardView;
 
-public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
+public class StockAdapter extends ListAdapter<Stock, StockAdapter.StockHolder> {
 
     private onItemClickListener listener;
 
-    public NoteAdapter() {
+    public StockAdapter() {
         super(DIFF_CALLBACK);
     }
 
-    private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<Note>() {
+    private static final DiffUtil.ItemCallback<Stock> DIFF_CALLBACK = new DiffUtil.ItemCallback<Stock>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Note oldItem, @NonNull Note newItem) {
+        public boolean areItemsTheSame(@NonNull Stock oldItem, @NonNull Stock newItem) {
             return oldItem.getId() == newItem.getId();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Note oldItem, @NonNull Note newItem) {
+        public boolean areContentsTheSame(@NonNull Stock oldItem, @NonNull Stock newItem) {
             return oldItem.getTitle().equals(newItem.getTitle()) && oldItem.getDescription().equals(newItem.getDescription()) && oldItem.getPriority().equals(newItem.getPriority());
         }
     };
 
     @NonNull
     @Override
-    public NoteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StockHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.note_item, parent, false);
-        return new NoteHolder(itemView);
+        return new StockHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteHolder holder, int position) {
-        Note currentNode = getItem(position);
+    public void onBindViewHolder(@NonNull StockHolder holder, int position) {
+        Stock currentNode = getItem(position);
         holder.textViewTitle.setText(currentNode.getTitle());
         holder.textViewDescription.setText(currentNode.getDescription());
         holder.textViewPriority.setText(String.valueOf(currentNode.getPriority()));
@@ -59,18 +59,19 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
 
     }
 
-    public Note getNoteAt(int position) {
+    public Stock getStockAt(int position) {
         return getItem(position);
     }
 
-    class NoteHolder extends RecyclerView.ViewHolder {
+
+    class StockHolder extends RecyclerView.ViewHolder {
         private TextView textViewTitle;
         private TextView textViewDescription;
         private TextView textViewPriority;
         private TextView textViewDateTime;
         private MaterialCardView cardView;
 
-        public NoteHolder(@NonNull final View itemView) {
+        public StockHolder(@NonNull final View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.text_view_title);
             textViewDescription = itemView.findViewById(R.id.text_view_description);
@@ -91,7 +92,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
     }
 
     public interface onItemClickListener {
-        void onItemClick(Note note);
+        void onItemClick(Stock stock);
     }
 
     public void setOnItemClickListener(onItemClickListener listener) {
