@@ -54,7 +54,7 @@ public class MainActivity5 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //               in next line have to change to AddEditTodoActivity
-                Intent intent2 = new Intent(MainActivity5.this, AddEditNoteActivity.class);
+                Intent intent2 = new Intent(MainActivity5.this, AddEditStockActivity.class);
                 startActivityForResult(intent2, Add_Note_Request2);
             }
         });
@@ -215,7 +215,7 @@ public class MainActivity5 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu2) {
         MenuInflater menuInflater2 = getMenuInflater();
-        menuInflater2.inflate(R.menu.main_menu, menu2);
+        menuInflater2.inflate(R.menu.main_menu2, menu2);
         sharedPreferences2
                 = getSharedPreferences(
                 "sharedPrefs", MODE_PRIVATE);
