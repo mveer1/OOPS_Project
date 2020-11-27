@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lightpage"
+    tools:context="com.example.oops_project.MainActivity4">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7E7E7E"
+        tools:listitem="@layout/note_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_note4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="32dp"
+        app:backgroundTint="#ff2b2b"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="#ffffff" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
