@@ -57,7 +57,7 @@ public class verificationpage extends AppCompatActivity {
                 }
 
             }
-        }
+                    });
 }
 
     private void requestOTP(String phoneNum) {
