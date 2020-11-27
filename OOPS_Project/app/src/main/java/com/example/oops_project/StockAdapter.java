@@ -37,7 +37,7 @@ public class StockAdapter extends ListAdapter<Stock, StockAdapter.StockHolder> {
     @Override
     public StockHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.note_item, parent, false);
+                .inflate(R.layout.note_item3, parent, false);
         return new StockHolder(itemView);
     }
 
@@ -73,11 +73,11 @@ public class StockAdapter extends ListAdapter<Stock, StockAdapter.StockHolder> {
 
         public StockHolder(@NonNull final View itemView) {
             super(itemView);
-            textViewTitle = itemView.findViewById(R.id.text_view_title);
-            textViewDescription = itemView.findViewById(R.id.text_view_description);
-            textViewPriority = itemView.findViewById(R.id.text_view_priority);
+            textViewTitle = itemView.findViewById(R.id.text_view_title3);
+            textViewDescription = itemView.findViewById(R.id.text_view_description3);
+            textViewPriority = itemView.findViewById(R.id.text_view_priority3);
             cardView = itemView.findViewById(R.id.cardView3);
-            textViewDateTime = itemView.findViewById(R.id.text_view_date_time);
+            textViewDateTime = itemView.findViewById(R.id.text_view_date_time3);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

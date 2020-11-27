@@ -37,7 +37,7 @@ public class RepairAdapter extends ListAdapter<Repair, RepairAdapter.RepairHolde
     @Override
     public RepairHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.note_item, parent, false);
+                .inflate(R.layout.note_item4, parent, false);
         return new RepairHolder(itemView);
     }
 
@@ -49,14 +49,15 @@ public class RepairAdapter extends ListAdapter<Repair, RepairAdapter.RepairHolde
         holder.textViewPriority.setText(String.valueOf(currentNode.getPriority()));
         holder.textViewDateTime.setText(currentNode.getDate());
 
-        if (currentNode.getPriority().equals("High")) {
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#FF5722"));
-        } else if (currentNode.getPriority().equals("Medium")) {
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#FFC107"));
-        } else if (currentNode.getPriority().equals("Low")) {
+        if (currentNode.getPriority().equals("Appliance Repair")) {
             holder.cardView.setCardBackgroundColor(Color.parseColor("#4CAF50"));
+        } else if (currentNode.getPriority().equals("Plumber")) {
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#3299d9"));
+        } else if (currentNode.getPriority().equals("Electrician")) {
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#FFC107"));
+        } else if (currentNode.getPriority().equals("Carpenter")) {
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#FF5722"));
         }
-
     }
 
     public Repair getRepairAt(int position) {
@@ -72,11 +73,11 @@ public class RepairAdapter extends ListAdapter<Repair, RepairAdapter.RepairHolde
 
         public RepairHolder(@NonNull final View itemView) {
             super(itemView);
-            textViewTitle = itemView.findViewById(R.id.text_view_title);
-            textViewDescription = itemView.findViewById(R.id.text_view_description);
-            textViewPriority = itemView.findViewById(R.id.text_view_priority);
-            cardView = itemView.findViewById(R.id.cardView3);
-            textViewDateTime = itemView.findViewById(R.id.text_view_date_time);
+            textViewTitle = itemView.findViewById(R.id.text_view_title4);
+            textViewDescription = itemView.findViewById(R.id.text_view_description4);
+            textViewPriority = itemView.findViewById(R.id.text_view_priority4);
+            cardView = itemView.findViewById(R.id.cardView4);
+            textViewDateTime = itemView.findViewById(R.id.text_view_date_time4);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

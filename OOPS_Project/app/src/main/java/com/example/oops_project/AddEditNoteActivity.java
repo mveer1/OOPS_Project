@@ -50,7 +50,7 @@ public class AddEditNoteActivity extends AppCompatActivity {
 
         editTextTitle = findViewById(R.id.edit_text_title);
         editTextDescription = findViewById(R.id.edit_text_Description);
-        spinnerPriority = findViewById(R.id.spinnerPriority);
+        spinnerPriority = findViewById(R.id.spinnerPriority4);
         tvDate = findViewById(R.id.tv_date);
         tvTime = findViewById(R.id.tv_time2);
 

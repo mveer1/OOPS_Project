@@ -74,7 +74,7 @@ public class TodoAdapter extends ListAdapter<Todo, TodoAdapter.TodoHolder> {
         public TodoHolder(@NonNull final View itemView3) {
             super(itemView3);
             textViewTitle = itemView3.findViewById(R.id.text_view_title3);
-            textViewDescription = itemView3.findViewById(R.id.text_view_description3);
+            textViewDescription = itemView3.findViewById(R.id.text_view_description4);
             textViewPriority = itemView3.findViewById(R.id.text_view_priority3);
             cardView = itemView3.findViewById(R.id.cardView3);
             textViewDateTime = itemView3.findViewById(R.id.text_view_date_time3);

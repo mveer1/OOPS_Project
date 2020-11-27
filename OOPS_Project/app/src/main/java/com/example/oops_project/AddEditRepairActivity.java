@@ -38,7 +38,7 @@ public class AddEditRepairActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_note);
+        setContentView(R.layout.activity_add_repair);
 
         Calendar calendar = Calendar.getInstance();
         //currentDate = DateFormat.getDateInstance(DateFormat.MEDIUM).format(calendar.getTime());
@@ -48,11 +48,11 @@ public class AddEditRepairActivity extends AppCompatActivity {
         String ntime = timeFormat.format(calendar.getTime());
         String time = ntime.replace("am", "AM").replace("pm", "PM");
 
-        editTextTitle = findViewById(R.id.edit_text_title);
-        editTextDescription = findViewById(R.id.edit_text_Description);
-        spinnerPriority = findViewById(R.id.spinnerPriority);
-        tvDate = findViewById(R.id.tv_date);
-        tvTime = findViewById(R.id.tv_time2);
+        editTextTitle = findViewById(R.id.edit_text_title4);
+        editTextDescription = findViewById(R.id.edit_text_Description4);
+        spinnerPriority = findViewById(R.id.spinnerPriority4);
+        tvDate = findViewById(R.id.tv_date4);
+        tvTime = findViewById(R.id.tv_time4);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
 
@@ -64,8 +64,8 @@ public class AddEditRepairActivity extends AppCompatActivity {
             tvDate.setText(intent.getStringExtra(EXTRA_DATE));
             tvTime.setText(intent.getStringExtra(EXTRA_TIME));
             //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.priorityList,R.layout.style_spinner);
-            String[] array = {"High", "Medium", "Low"};
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array);
+            String[] array2 = {"Appliance Repair","Plumber", "Electrician","Carpenter"};
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array2);
             spinnerPriority.setAdapter(adapter);
             //spinnerPriority.setSelection(intent.getIntExtra(EXTRA_PRIORITY_NUMBER,1));
         } else {
@@ -73,8 +73,8 @@ public class AddEditRepairActivity extends AppCompatActivity {
             tvDate.setText(date);
             tvTime.setText(time);
             //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.priorityList,R.layout.style_spinner);
-            String[] array = {"High", "Medium", "Low"};
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array);
+            String[] array2 = {"Appliance Repair","Plumber", "Electrician","Carpenter"};
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array2);
             spinnerPriority.setAdapter(adapter);
             //spinnerPriority.setSelection(intent.getIntExtra(EXTRA_PRIORITY_NUMBER,1));
         }
@@ -102,13 +102,16 @@ public class AddEditRepairActivity extends AppCompatActivity {
 
         int priorityNumber = 0;
 
-        if (priority.equals("High")) {
+        if (priority.equals("Appliance Repair")) {
+            priorityNumber = 4;
+        } else if (priority.equals("Plumber")) {
             priorityNumber = 3;
-        } else if (priority.equals("Medium")) {
+        } else if (priority.equals("Electrician")) {
             priorityNumber = 2;
-        } else if (priority.equals("Low")) {
-            priorityNumber = 1;
+        } else if (priority.equals("Carpenter")) {
+            priorityNumber = 2;
         }
+
 
         data.putExtra(EXTRA_PRIORITY_NUMBER, priorityNumber);
 
@@ -124,14 +127,14 @@ public class AddEditRepairActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.add_note_menu, menu);
+        menuInflater.inflate(R.menu.add_repair_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.save_note:
+            case R.id.save_repair:
                 saveRepair();
                 return true;
             default:

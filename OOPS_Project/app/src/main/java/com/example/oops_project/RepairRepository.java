@@ -46,7 +46,7 @@ public class RepairRepository  {
     private static class InsertNodeAsyncTask extends AsyncTask<Repair, Void, Void> {
         private RepairDoa repairDoa;
 
-        private InsertNodeAsyncTask(RepairDoa stockDoa) {
+        private InsertNodeAsyncTask(RepairDoa repairDoa) {
             this.repairDoa = repairDoa;
         }
 
@@ -60,7 +60,7 @@ public class RepairRepository  {
     private static class UpdateNodeAsyncTask extends AsyncTask<Repair, Void, Void> {
         private RepairDoa repairDoa;
 
-        private UpdateNodeAsyncTask(RepairDoa stockDoa) {
+        private UpdateNodeAsyncTask(RepairDoa repairDoa) {
             this.repairDoa = repairDoa;
         }
 

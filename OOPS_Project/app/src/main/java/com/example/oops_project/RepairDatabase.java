@@ -63,9 +63,11 @@ public abstract class RepairDatabase extends RoomDatabase {
             String date = dateFormat.format(calendar.getTime());
             String ntime = timeFormat.format(calendar.getTime());
             String time = ntime.replace("am", "AM").replace("pm", "PM");
-            RepairDoa.insert(new Repair("Title 1", "Description 1", "High", 3, date, time));
-            RepairDoa.insert(new Repair("Title 2", "Description 2", "Medium", 2, date, time));
-            RepairDoa.insert(new Repair("Title 3", "Description 3", "Low", 1, date, time));
+            RepairDoa.insert(new Repair("Title 1", "Description 1", "Appliance Repair", 4, date, time));
+            RepairDoa.insert(new Repair("Title 2", "Description 3", "Plumber", 2, date, time));
+            RepairDoa.insert(new Repair("Title 3", "Description 2", "Electrician", 3, date, time));
+            RepairDoa.insert(new Repair("Title 4", "Description 3", "Carpenter", 4, date, time));
+
             return null;
         }
     }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView3"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView4"
     style="@style/Widget.MaterialComponents.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,23 +15,26 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="224dp"
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/text_view_date_time3"
+            android:id="@+id/text_view_date_time4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_priority3"
+            android:layout_below="@id/text_view_priority4"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/exo"
             android:text="Friday, 4 April, 2020"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229" />
 
         <TextView
-            android:id="@+id/text_view_priority3"
+            android:id="@+id/text_view_priority4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -41,15 +45,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/text_view_title3"
+            app:layout_constraintStart_toEndOf="@+id/text_view_title4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_title3"
+            android:id="@+id/text_view_title4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_toStartOf="@id/text_view_priority3"
+            android:layout_toStartOf="@id/text_view_priority4"
             android:ellipsize="end"
 
             android:fontFamily="@font/exo_medium"
@@ -64,10 +68,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_description3"
+            android:id="@+id/text_view_description4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_title3"
+            android:layout_below="@id/text_view_title4"
             android:layout_marginEnd="8dp"
             android:drawablePadding="15dp"
             android:ellipsize="end"
@@ -80,11 +84,22 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/text_view_date_time3"
-            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_date_time4"
+            app:layout_constraintHorizontal_bias="0.125"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_title3"
-            app:layout_constraintVertical_bias="0.625" />
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title4"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="183dp"
+            android:layout_height="136dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
