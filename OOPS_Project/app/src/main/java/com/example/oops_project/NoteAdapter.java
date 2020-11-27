@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.oops_project.Note;
-import com.example.oops_project.R;
 import com.google.android.material.card.MaterialCardView;
 
 public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
@@ -77,7 +75,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
             textViewTitle = itemView.findViewById(R.id.text_view_title);
             textViewDescription = itemView.findViewById(R.id.text_view_description);
             textViewPriority = itemView.findViewById(R.id.text_view_priority);
-            cardView = itemView.findViewById(R.id.cardView);
+            cardView = itemView.findViewById(R.id.cardView3);
             textViewDateTime = itemView.findViewById(R.id.text_view_date_time);
 
             itemView.setOnClickListener(new View.OnClickListener() {

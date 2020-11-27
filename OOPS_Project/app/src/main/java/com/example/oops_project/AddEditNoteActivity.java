@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.oops_project.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
@@ -52,7 +51,7 @@ public class AddEditNoteActivity extends AppCompatActivity {
         editTextDescription = findViewById(R.id.edit_text_Description);
         spinnerPriority = findViewById(R.id.spinnerPriority);
         tvDate = findViewById(R.id.tv_date);
-        tvTime = findViewById(R.id.tv_time);
+        tvTime = findViewById(R.id.tv_time2);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
 

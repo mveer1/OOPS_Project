@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -27,8 +26,17 @@
             android:value="false" />
 
         <activity
+            android:name=".MainActivity6"
+            android:label="@string/title_activity_main6">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity5"
-            android:label="@string/title_activity_main5">
+            android:label="Stocks">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

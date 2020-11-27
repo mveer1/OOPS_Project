@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView3"
+    android:id="@+id/cardView2"
     style="@style/Widget.MaterialComponents.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,10 +18,10 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/text_view_date_time"
+            android:id="@+id/text_view_date_time2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_priority"
+            android:layout_below="@id/text_view_priority2"
             android:fontFamily="@font/exo"
             android:text="Friday, 4 April, 2020"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -30,7 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_priority"
+            android:id="@+id/text_view_priority2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -41,15 +41,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/text_view_title"
+            app:layout_constraintStart_toEndOf="@+id/text_view_title2"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_title"
+            android:id="@+id/text_view_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_toStartOf="@id/text_view_priority"
+            android:layout_toStartOf="@id/text_view_priority2"
             android:ellipsize="end"
 
             android:fontFamily="@font/exo_medium"
@@ -64,10 +64,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/text_view_description"
+            android:id="@+id/text_view_description2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_title"
+            android:layout_below="@id/text_view_title2"
             android:layout_marginEnd="8dp"
             android:drawablePadding="15dp"
             android:ellipsize="end"
@@ -80,10 +80,10 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/text_view_date_time"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_date_time2"
             app:layout_constraintHorizontal_bias="0.003"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title2"
             app:layout_constraintVertical_bias="0.625" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
