@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 public class recycleAdapter extends RecyclerView.Adapter<recycleAdapter.myviewholder>{
 
     String data1[],data2[];
-    int images[];
+    int image[];
     Context context;
 
     public recycleAdapter(Context ct, String s1[], String s2[], int img[]){
         context=ct;
         data1=s1;
         data2=s2;
-        images = img;
+        image = img;
     }
 
     @NonNull
@@ -34,14 +34,14 @@ public class recycleAdapter extends RecyclerView.Adapter<recycleAdapter.myviewho
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
         holder.textView9.setText(data1[position]);
-        holder.textView9.setText(data1[position]);
-        holder.imageView3.setImageResource(images[position]);
+        holder.textView10.setText(data2[position]);
+        holder.imageView3.setImageResource(image[position]);
 
     }
 
     @Override
     public int getItemCount() {
-        return images.length;
+        return image.length;
     }
 
     public class myviewholder extends RecyclerView.ViewHolder{
@@ -52,7 +52,7 @@ public class recycleAdapter extends RecyclerView.Adapter<recycleAdapter.myviewho
             super(itemView);
             textView9=itemView.findViewById(R.id.textView9);
             textView10=itemView.findViewById(R.id.textView10);
-            imageView3 = itemView.findViewById(R.id.imageView3);
+            imageView3 = itemView.findViewById(R.id.imageView5);
         }
     }
 

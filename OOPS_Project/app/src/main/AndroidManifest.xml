@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -27,51 +29,68 @@
             android:value="false" />
 
         <activity
-            android:name=".MainActivity7"
-            android:label="Repairs">
+            android:name=".MainActivity8"
+            android:label="@string/title_activity_main8">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity7"
+            android:label="Repairs">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".MainActivity6"
             android:label="Todos">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".MainActivity5"
             android:label="Stocks">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".MainActivity4"
+            android:label="Notes">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".MainActivity3"
+            android:label="@string/title_activity_main3"
+            android:theme="@style/Theme.OOPS_Project.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity4"
-            android:label="Notes">
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
-
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
-        </activity>
-
-
-
-
-
-
-        <activity
-            android:name=".MainActivity3"
-            android:label="@string/title_activity_main3"
-            android:theme="@style/Theme.OOPS_Project.NoActionBar" />
         <activity android:name=".verificationpage"> <!-- <activity -->
             android:name=".verificationpage"
             android:label="@string/title_activity_verification">
@@ -85,10 +104,8 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
         <activity android:name=".AddEditNoteActivity" />
-
         <activity android:name=".AddEditStockActivity" />
         <activity android:name=".AddEditRepairActivity" />
-
         <activity android:name=".AddEditTodoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
