@@ -49,7 +49,7 @@ public class user_info extends AppCompatActivity {
         contact = findViewById(R.id.editTextPhone);
         String number = contact.getText().toString();
         if(number.length()==10 && number.matches("[0-9]*")){
-            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+            startActivity(new Intent(getApplicationContext(), verificationpage.class));
         }else{
             Log.d("User_info", "Invalid Phone Number");
             Toast.makeText(getApplicationContext(), "Invalid Phone Number", Toast.LENGTH_SHORT)

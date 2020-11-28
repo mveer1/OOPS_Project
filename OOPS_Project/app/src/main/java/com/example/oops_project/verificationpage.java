@@ -70,6 +70,7 @@ public class verificationpage extends AppCompatActivity {
                     if(!userOTP.isEmpty() && userOTP.length() == 6){
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, userOTP);
                         verifyAuth(credential);
+                        startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                     }
                 }
 
@@ -113,7 +114,6 @@ public class verificationpage extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
             }
 
             @Override

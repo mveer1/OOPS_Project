@@ -80,7 +80,7 @@ public class Login extends AppCompatActivity {
                 Log.d("Login", "Success");
                 Toast.makeText(getApplicationContext(), "Signed in", Toast.LENGTH_SHORT);
                 handleFacebookAccessToken(loginResult.getAccessToken());
-                startActivity(new Intent(Login.this, user_info.class));
+                startActivity(new Intent(Login.this, MainActivity3.class));
             }
 
             @Override
@@ -188,7 +188,7 @@ public class Login extends AppCompatActivity {
         if(user!=null){
             Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
             startActivity(intent);
-        }else if(isLoggedIn){
+        }else if(!isLoggedIn){
             startActivity(new Intent(getApplicationContext(), MainActivity3.class));
         }
     }
