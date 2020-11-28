@@ -7,27 +7,6 @@
     android:background="@drawable/lightpage"
     tools:context=".verificationpage">
 
-    <EditText
-        android:id="@+id/phone2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="400dp"
-        android:ems="10"
-        android:fontFamily="@font/exo"
-        android:hint="Email"
-        android:inputType="phone"
-        android:textColor="#7F7F7F"
-        android:textColorHint="#7F7F7F"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </EditText>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -81,8 +60,8 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone" />
@@ -108,7 +87,40 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/resendOtpBtn"
+        android:layout_width="73dp"
+        android:layout_height="29dp"
+        android:text="Resend"
+        android:textColor="#FF2B2B"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/codeEnter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/codeEnter"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#009688"
+        android:fontFamily="@font/exo"
+        android:text="NEXT"
+        android:textColor="#7F7F7F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state"
+        app:layout_constraintVertical_bias="0.346" />
 
     <TextView
         android:id="@+id/state"
@@ -126,48 +138,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/progressBar"
         app:layout_constraintTop_toTopOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintVertical_bias="0.92" />
 
-    <TextView
-        android:id="@+id/resendOtpBtn"
-        android:layout_width="73dp"
-        android:layout_height="29dp"
-        android:text="Resend"
-        android:textColor="#FF2B2B"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/codeEnter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toEndOf="@+id/progressBar"
-        app:layout_constraintTop_toTopOf="@+id/codeEnter"
-        app:layout_constraintVertical_bias="0.733" />
-
-    <Button
-        android:id="@+id/nextBtn"
-        android:layout_width="219dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#009688"
-        android:fontFamily="@font/exo"
-        android:text="NEXT"
-        android:textColor="#7F7F7F"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/state"
-        app:layout_constraintVertical_bias="0.412" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_________________________OR____________________________"
-        app:layout_constraintBottom_toTopOf="@+id/phone2"
-        app:layout_constraintEnd_toEndOf="@+id/phone2"
-        app:layout_constraintStart_toStartOf="@+id/phone2"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
