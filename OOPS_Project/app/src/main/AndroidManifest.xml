@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -85,8 +85,10 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
         <activity android:name=".AddEditNoteActivity" />
+
         <activity android:name=".AddEditStockActivity" />
         <activity android:name=".AddEditRepairActivity" />
+
         <activity android:name=".AddEditTodoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
