@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,35 +19,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class user_info extends AppCompatActivity {
 
-    TextView name, email;
-    Button logout;
-    FirebaseAuth firebaseAuth;
+    EditText contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
-
-        logout = findViewById(R.id.logout_button);
-//        name = findViewById(R.id.user_name);
-//        email = findViewById(R.id.user_email);
-
-        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        if(signInAccount!=null){
-            Toast.makeText(this, "Already Signed In", Toast.LENGTH_SHORT);
-        }else{
-            startActivity(new Intent(this, Login.class));
-        }
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(user_info.this, MainActivity2.class));
-            }
-        });
-
-
 
 
 //        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
@@ -66,12 +45,15 @@ public class user_info extends AppCompatActivity {
     }
 
     public void toMain(View view) {
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        firebaseAuth = FirebaseAuth.getInstance();
-        if(firebaseUser!=null){
-            firebaseAuth.signOut();
-            startActivity(new Intent(user_info.this, MainActivity.class));
-        }
 
+        contact = findViewById(R.id.editTextPhone);
+        String number = contact.getText().toString();
+        if(number.length()==10 && number.matches("[0-9]*")){
+            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+        }else{
+            Log.d("User_info", "Invalid Phone Number");
+            Toast.makeText(getApplicationContext(), "Invalid Phone Number", Toast.LENGTH_SHORT)
+                    .show();
+        }
     }
 }

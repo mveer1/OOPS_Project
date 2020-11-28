@@ -1,7 +1,9 @@
 package com.example.oops_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
@@ -10,6 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -80,5 +83,30 @@ public class MainActivity3 extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        switch(id){
+            case R.id.nav_notes:
+                startActivity(new Intent(getApplicationContext(), MainActivity4.class));
+                break;
+            case R.id.maintainance:
+                startActivity(new Intent(getApplicationContext(), maintainance.class));
+                break;
+            case R.id.nav_contactUs:
+                startActivity(new Intent(getApplicationContext(), aboutus.class));
+                break;
+            case R.id.nav_stocks:
+                startActivity(new Intent(getApplicationContext(), MainActivity5.class));
+                break;
+            case R.id.nav_todo:
+                startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 }

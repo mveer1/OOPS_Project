@@ -67,7 +67,6 @@ public class MainActivity2 extends AppCompatActivity {
                 Log.d("Login", "Success");
                 Toast.makeText(getApplicationContext(), "Signed in", Toast.LENGTH_SHORT);
                 handleFacebookAccessToken(loginResult.getAccessToken());
-                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
             }
 
             @Override
@@ -101,6 +100,7 @@ public class MainActivity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(getApplicationContext(), user_info.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Login", "signInWithCredential:failure", task.getException());
@@ -178,6 +178,7 @@ public class MainActivity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Message", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(getApplicationContext(), user_info.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Message", "signInWithCredential:failure", task.getException());
@@ -231,14 +232,23 @@ public class MainActivity2 extends AppCompatActivity {
         profession = t4.getText().toString();
         password = t5.getText().toString();
         confirm_password  = t6.getText().toString();
+        boolean email_match = email.matches("[a-z0-9A-Z.$&_-]*@[a-zA-z0-9]*.[a-zA-z]*");
 
         if(username==null | email ==null |contact==null |profession==null | password ==null |confirm_password==null){
             Log.w("Login", "Some Fields Null");
-            Toast.makeText(this, "Please Fill all fields", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Please Fill all fields", Toast.LENGTH_SHORT).show();
         }
         else if(password.compareTo(confirm_password) != 0){
             Log.w("Login", "Password Mismatch");
             Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT);
+        }
+        else if(contact.length() != 10 && !contact.matches("[0-9]*")){
+            Log.w("Login", "Phone Invalid");
+            Toast.makeText(this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
+        }
+        else if(!email_match){
+            Log.w("Login", "Email Invalid");
+            Toast.makeText(this, "Invalid Email", Toast.LENGTH_SHORT).show();
         }
         else{
             Log.w("Login", "All Fields filled");
@@ -256,7 +266,7 @@ public class MainActivity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(getApplicationContext(),MainActivity3.class));
+                            startActivity(new Intent(getApplicationContext(),verificationpage.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Error", "createUserWithEmail:failure", task.getException());
@@ -293,4 +303,5 @@ public class MainActivity2 extends AppCompatActivity {
             getUserData();
         }
     }
+
 }

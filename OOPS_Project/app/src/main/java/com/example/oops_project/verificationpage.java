@@ -3,6 +3,7 @@ package com.example.oops_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -52,7 +53,7 @@ public class verificationpage extends AppCompatActivity {
 
             public void onClick(View v) {
                 if(!verificationInProgress){
-                    if(!phoneNumber.getText().toString().isEmpty() && phoneNumber.getText().toString().length() == 10){
+                    if(!phoneNumber.getText().toString().isEmpty() && phoneNumber.getText().toString().length() == 10 && checkPhoneNumber()){
                         String phoneNum = "+" + codePicker.getSelectedCountryCode()+phoneNumber.getText().toString();
                         Log.d(TAG, "onClick: Phone No -> " + phoneNum);
                         progressBar.setVisibility(View.VISIBLE);
@@ -111,7 +112,7 @@ public class verificationpage extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-
+                    startActivity(new Intent(getApplicationContext(), MainActivity3.class));
             }
 
             @Override
@@ -120,6 +121,13 @@ public class verificationpage extends AppCompatActivity {
 
             }
         });
+    }
+
+    public boolean checkPhoneNumber(){
+        phoneNumber = findViewById(R.id.phone);
+        String phone = phoneNumber.getText().toString();
+
+        return phone.matches("[0-9]*");
     }
 
 }
