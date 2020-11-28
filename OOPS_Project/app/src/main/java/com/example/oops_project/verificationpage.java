@@ -25,6 +25,7 @@ public class verificationpage extends AppCompatActivity {
     FirebaseAuth fAuth;
     EditText phoneNumber, codeEnter;
     Button nextBtn;
+    Button Resnd;
     ProgressBar progressBar;
     TextView state;
     CountryCodePicker codePicker;
@@ -42,6 +43,8 @@ public class verificationpage extends AppCompatActivity {
         nextBtn = findViewById(R.id.nextBtn);
         state = findViewById(R.id.state);
         codePicker = findViewById(R.id.ccp);
+        Resnd= findViewById(R.id.resendOtpBtn);
+
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +54,17 @@ public class verificationpage extends AppCompatActivity {
                     String phoneNum = "+" + codePicker.getSelectedCountryCode()+phoneNumber.getText().toString();
                     Log.d(TAG, "onClick: Phone No -> " + phoneNum);
                     requestOTP(phoneNum);
+                    codeEnter.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.VISIBLE);
+                    state.setVisibility(View.VISIBLE);
+                    codePicker.setVisibility(View.GONE);
+                    Resnd.setVisibility(View.GONE);
+
                 }
                 else {
                     phoneNumber.setError("Phone Number is Not Valid");
                 }
+
 
             }
                     });

@@ -113,7 +113,7 @@
         android:fontFamily="@font/exo"
         android:hint="Enter OTP"
         android:inputType="number"
-        android:textColor="#FFFFFF"
+        android:textColor="#7F7F7F"
         android:textColorHighlight="#E8E9EE"
         android:textColorHint="#7F7F7F"
         android:visibility="invisible"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/phone"
         app:layout_constraintVertical_bias="0.149" />
 
-    <TextView
+    <Button
         android:id="@+id/resendOtpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
