@@ -7,9 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MyAccount extends AppCompatActivity {
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     private TextView mTextView;
 
     @Override
@@ -19,8 +20,5 @@ public class MyAccount extends AppCompatActivity {
 
         mTextView = (TextView) findViewById(R.id.text);
 
-        String name = user.getDisplayName();
-        String email = user.getEmail();
-        String phone = user.getPhoneNumber();
     }
 }
