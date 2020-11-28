@@ -119,6 +119,27 @@ public class AddEditTodoActivity extends AppCompatActivity {
         setResult(RESULT_OK, data);
         finish();
     }
+    public void shareTodo() {
+
+        editTextTitle = findViewById(R.id.edit_text_title3);
+        editTextDescription = findViewById(R.id.edit_text_Description3);
+
+        String titleText = editTextTitle.getText().toString();
+        String descriptionText = editTextDescription.getText().toString();
+
+        String data = "Title: " + titleText + "\n" + "Description: " + descriptionText;
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, data);
+        sendIntent.setType("text/plain");
+
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(shareIntent);
+
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -132,6 +153,9 @@ public class AddEditTodoActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.save_todo:
                 saveTodo();
+                return true;
+            case R.id.share_todo:
+                shareTodo();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -1,12 +1,14 @@
 package com.example.oops_project;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,7 +66,7 @@ public class AddEditRepairActivity extends AppCompatActivity {
             tvDate.setText(intent.getStringExtra(EXTRA_DATE));
             tvTime.setText(intent.getStringExtra(EXTRA_TIME));
             //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.priorityList,R.layout.style_spinner);
-            String[] array2 = {"Appliance Repair","Plumber", "Electrician","Carpenter"};
+            String[] array2 = {"Appliance Repair", "Plumber", "Electrician", "Carpenter"};
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array2);
             spinnerPriority.setAdapter(adapter);
             //spinnerPriority.setSelection(intent.getIntExtra(EXTRA_PRIORITY_NUMBER,1));
@@ -73,7 +75,7 @@ public class AddEditRepairActivity extends AppCompatActivity {
             tvDate.setText(date);
             tvTime.setText(time);
             //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.priorityList,R.layout.style_spinner);
-            String[] array2 = {"Appliance Repair","Plumber", "Electrician","Carpenter"};
+            String[] array2 = {"Appliance Repair", "Plumber", "Electrician", "Carpenter"};
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.style_spinner, array2);
             spinnerPriority.setAdapter(adapter);
             //spinnerPriority.setSelection(intent.getIntExtra(EXTRA_PRIORITY_NUMBER,1));
@@ -124,28 +126,53 @@ public class AddEditRepairActivity extends AppCompatActivity {
         finish();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.add_repair_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.save_repair:
-                saveRepair();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+    public void Callrepair() {
+
+
+        String priority=spinnerPriority.getSelectedItem().toString();
+
+        Uri u= Uri.parse("tel:9981225555");
+
+        if(priority.equals("Appliance Repair")){
+            Toast.makeText(this, "Calling Service Engineer", Toast.LENGTH_LONG)
+                .show();
+            u = Uri.parse("tel:9981224444");
         }
+        else if(priority.equals("Plumber")){
+            Toast.makeText(this, "Calling Plumber", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981223333");
+        }
+        else if(priority.equals("Electrician")){
+            Toast.makeText(this, "Calling Electrician", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981222222");
+        }
+        else if(priority.equals("Carpenter")){
+            Toast.makeText(this, "Calling Carpenter", Toast.LENGTH_LONG)
+                .show();
+            u = Uri.parse("tel:9981228888");}
+
+        Intent i = new Intent(Intent.ACTION_DIAL, u);
+
+        try {
+            // Launch the Phone app's dialer with a phone
+            // number to dial a call.
+            startActivity(i);
+        } catch (SecurityException s) {
+            // show() method display the toast with
+            // exception message.
+            Toast.makeText(this, "An error occurred", Toast.LENGTH_LONG)
+                    .show();
+        }
+
     }
 
-    public void share_note(View view) {
+    public void shareRepair() {
 
-        editTextTitle = findViewById(R.id.edit_text_title);
-        editTextDescription = findViewById(R.id.edit_text_Description);
+        editTextTitle = findViewById(R.id.edit_text_title4);
+        editTextDescription = findViewById(R.id.edit_text_Description4);
 
         String titleText = editTextTitle.getText().toString();
         String descriptionText = editTextDescription.getText().toString();
@@ -159,5 +186,41 @@ public class AddEditRepairActivity extends AppCompatActivity {
 
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
+
+
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.add_repair_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.save_repair:
+                saveRepair();
+                return true;
+            case R.id.call_repair:
+                Callrepair();
+            return true;
+            case R.id.share_repair:
+                shareRepair();
+                return true;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+
+    }
+
+
+
+
 }
