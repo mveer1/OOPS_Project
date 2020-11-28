@@ -132,7 +132,7 @@
         android:fontFamily="@font/exo"
         android:text="Resend"
         android:textColor="#7F7F7F"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/codeEnter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
