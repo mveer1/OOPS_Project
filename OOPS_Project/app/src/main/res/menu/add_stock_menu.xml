@@ -7,4 +7,9 @@
         android:icon="@drawable/ic_save"
         android:title="Save"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/share_stock"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Share"
+        app:showAsAction="ifRoom" />
 </menu>

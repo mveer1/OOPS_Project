@@ -136,11 +136,13 @@ public class MainActivity7 extends AppCompatActivity {
 
                 int priorityNumber = 0;
 
-                if (priority.equals("High")) {
+                if (priority.equals("Appliance Repair")) {
+                    priorityNumber = 4;
+                } else if (priority.equals("Plumber")) {
                     priorityNumber = 3;
-                } else if (priority.equals("Medium")) {
+                } else if (priority.equals("Electrician")) {
                     priorityNumber = 2;
-                } else if (priority.equals("Low")) {
+                }else if (priority.equals("Carpenter")) {
                     priorityNumber = 1;
                 }
 
@@ -168,11 +170,13 @@ public class MainActivity7 extends AppCompatActivity {
             String time = data.getStringExtra(AddEditRepairActivity.EXTRA_TIME);
             int priorityNumber = 0;
 
-            if (priority.equals("High")) {
-                priorityNumber = 3;
-            } else if (priority.equals("Medium")) {
-                priorityNumber = 2;
-            } else if (priority.equals("Low")) {
+            if (priority.equals("Appliance Repair")) {
+                    priorityNumber = 4;
+                } else if (priority.equals("Plumber")) {
+                    priorityNumber = 3;
+                } else if (priority.equals("Electrician")) {
+                    priorityNumber = 2;
+                }else if (priority.equals("Carpenter")) {
                 priorityNumber = 1;
             }
 
@@ -193,11 +197,13 @@ public class MainActivity7 extends AppCompatActivity {
             String date = data.getStringExtra(AddEditRepairActivity.EXTRA_DATE);
             String time = data.getStringExtra(AddEditRepairActivity.EXTRA_TIME);
             int priorityNumber = 0;
-            if (priority.equals("High")) {
+            if (priority.equals("Appliance Repair")) {
+                priorityNumber = 4;
+            } else if (priority.equals("Plumber")) {
                 priorityNumber = 3;
-            } else if (priority.equals("Medium")) {
+            } else if (priority.equals("Electrician")) {
                 priorityNumber = 2;
-            } else if (priority.equals("Low")) {
+            }else if (priority.equals("Carpenter")) {
                 priorityNumber = 1;
             }
             Repair note = new Repair(title, description, priority, priorityNumber, date, time);

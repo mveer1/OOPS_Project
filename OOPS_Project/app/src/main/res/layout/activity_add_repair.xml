@@ -30,7 +30,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_date"
+                android:id="@+id/tv_date4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/exo"
@@ -41,7 +41,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_time2"
+                android:id="@+id/tv_time4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/exo"
@@ -96,7 +96,7 @@
         app:hintTextAppearance="@style/MyHintStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_title"
+            android:id="@+id/edit_text_title4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/exo"
@@ -121,7 +121,7 @@
         app:hintTextAppearance="@style/MyHintStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_text_Description"
+            android:id="@+id/edit_text_Description4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/exo"
