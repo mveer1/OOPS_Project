@@ -62,7 +62,7 @@
         android:onClick="to_register"
         android:textColor="#FF2B2B"
         app:backgroundTint="#FFFFFF"
-        app:elevation="0dp"
+        android:elevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
