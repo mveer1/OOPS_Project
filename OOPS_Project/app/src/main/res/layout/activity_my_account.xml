@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MyAccount"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        android:boxedEdges="all">
+
+        <TextView
+            android:id="@+id/profession"
+            android:layout_width="367dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="200dp"
+            android:text="profession" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="367dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="400dp"
+            android:text="phone" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="164dp"
+            android:layout_height="169dp"
+            android:background="#FFFFFF"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="367dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="300dp"
+            android:text="email" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="153dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="70dp"
+            android:text="Username" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="520dp"
+            android:text="Logout" />
+
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>

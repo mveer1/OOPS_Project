@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,7 +18,7 @@
         android:theme="@style/Theme.OOPS_Project">
         <uses-library
             android:name="com.google.android.wearable"
-            android:required="false" />
+            android:required="true" />
 
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
@@ -24,8 +26,17 @@
         -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
-            android:value="false" />
+            android:value="true" />
 
+        <activity
+            android:name=".MyAccount"
+            android:label="@string/title_activity_my_account">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity7"
             android:label="Repairs">
@@ -56,18 +67,12 @@
         <activity
             android:name=".MainActivity4"
             android:label="Notes">
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
-
-
-
-
         <activity
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3"
@@ -85,10 +90,8 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".user_info" />
         <activity android:name=".AddEditNoteActivity" />
-
         <activity android:name=".AddEditStockActivity" />
         <activity android:name=".AddEditRepairActivity" />
-
         <activity android:name=".AddEditTodoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
