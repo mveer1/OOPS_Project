@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.26999998" />
 
     <EditText
         android:id="@+id/phone"
@@ -40,68 +40,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="464dp"
+        android:layout_marginBottom="468dp"
         android:ems="10"
         android:fontFamily="@font/exo"
-        android:hint="Phone"
+        android:hint="Mobile Number"
         android:inputType="phone"
         android:textColor="#7F7F7F"
         android:textColorHint="#7F7F7F"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent">
 
     </EditText>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
-
-    <EditText
-        android:id="@+id/codeEnter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:fontFamily="@font/exo"
-        android:hint="Enter OTP"
-        android:inputType="number"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#E8E9EE"
-        android:textColorHint="#7F7F7F"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <TextView
-        android:id="@+id/resendOtpBtn"
-        android:layout_width="73dp"
-        android:layout_height="29dp"
-        android:text="Resend"
-        android:textColor="#FF2B2B"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/codeEnter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toEndOf="@+id/progressBar"
-        app:layout_constraintTop_toTopOf="@+id/codeEnter"
-        app:layout_constraintVertical_bias="0.866" />
 
     <Button
         android:id="@+id/nextBtn"
@@ -117,10 +69,21 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/state"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintVertical_bias="0.321" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
 
     <TextView
         android:id="@+id/state"
@@ -135,9 +98,45 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/progressBar"
-        app:layout_constraintTop_toTopOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+    <EditText
+        android:id="@+id/codeEnter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:fontFamily="@font/exo"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:textColor="#7F7F7F"
+        android:textColorHighlight="#E8E9EE"
+        android:textColorHint="#7F7F7F"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <Button
+        android:id="@+id/resendOtpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFCC26"
+        android:fontFamily="@font/exo"
+        android:text="Resend"
+        android:textColor="#7F7F7F"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/codeEnter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/codeEnter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

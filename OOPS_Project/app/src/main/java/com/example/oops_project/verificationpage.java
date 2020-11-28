@@ -59,6 +59,7 @@ public class verificationpage extends AppCompatActivity {
                         progressBar.setVisibility(View.VISIBLE);
                         state.setText("Sending OTP... ");
                         state.setVisibility(View.VISIBLE);
+                        //codePicker.setVisibility(View.GONE);
                         requestOTP(phoneNum);
                     }
                     else {
@@ -66,7 +67,7 @@ public class verificationpage extends AppCompatActivity {
                     }
                 }else {
                     String userOTP = codeEnter.getText().toString();
-                    if(/*!userOTP.isEmpty() &&*/ userOTP.length() == 6){
+                    if(!userOTP.isEmpty() && userOTP.length() == 6){
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, userOTP);
                         verifyAuth(credential);
                     }
@@ -74,9 +75,9 @@ public class verificationpage extends AppCompatActivity {
 
             }
 
-        });                  
+        });
 
-}
+    }
 
     private void verifyAuth(PhoneAuthCredential credential) {
         fAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -112,7 +113,7 @@ public class verificationpage extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                    startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity3.class));
             }
 
             @Override

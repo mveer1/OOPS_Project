@@ -75,7 +75,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
             textViewTitle = itemView.findViewById(R.id.text_view_title);
             textViewDescription = itemView.findViewById(R.id.text_view_description);
             textViewPriority = itemView.findViewById(R.id.text_view_priority);
-            cardView = itemView.findViewById(R.id.cardView3);
+            cardView = itemView.findViewById(R.id.cardView);
             textViewDateTime = itemView.findViewById(R.id.text_view_date_time);
 
             itemView.setOnClickListener(new View.OnClickListener() {

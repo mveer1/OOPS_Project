@@ -74,13 +74,14 @@
 
     <Button
         android:id="@+id/login_page_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="173dp"
+        android:layout_height="55dp"
         android:layout_marginTop="316dp"
         android:fontFamily="@font/exo"
         android:onClick="login_user"
         android:text="Login"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:backgroundTint="#FF2B2B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
