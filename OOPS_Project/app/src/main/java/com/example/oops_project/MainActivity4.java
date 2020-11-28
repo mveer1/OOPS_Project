@@ -280,4 +280,52 @@ public class MainActivity4 extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
+    public void goto_todo76(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+    public void goto_stock75(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+    public void goto_note74(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_todo46(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair47(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock45(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_note64(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_repair67(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock65(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_todo56(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair57(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_note54(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
 }

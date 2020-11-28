@@ -280,4 +280,17 @@ public class MainActivity7 extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+    public void goto_todo76(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+    public void goto_stock75(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+    public void goto_note74(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_abtus(MenuItem item) {
+        startActivity(new Intent(getApplicationContext(),MainActivity8.class));
+    }
 }
