@@ -1,6 +1,7 @@
 package com.example.oops_project;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -109,7 +110,7 @@ public class AddEditRepairActivity extends AppCompatActivity {
         } else if (priority.equals("Electrician")) {
             priorityNumber = 2;
         } else if (priority.equals("Carpenter")) {
-            priorityNumber = 2;
+            priorityNumber = 1;
         }
 
 
@@ -122,6 +123,61 @@ public class AddEditRepairActivity extends AppCompatActivity {
 
         setResult(RESULT_OK, data);
         finish();
+    }
+
+    public void callRepair()
+    {
+
+        String priority = spinnerPriority.getSelectedItem().toString();
+        int priorityNumber = 0;
+
+        if (priority.equals("Appliance Repair")) {
+            priorityNumber = 4;
+        } else if (priority.equals("Plumber")) {
+            priorityNumber = 3;
+        } else if (priority.equals("Electrician")) {
+            priorityNumber = 2;
+        } else if (priority.equals("Carpenter")) {
+            priorityNumber = 1;
+        }
+
+        Uri u= Uri.parse("tel:9981222222");
+        if(priorityNumber == 4) {
+            Toast.makeText(this, "Calling Service Engineer", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981224444");
+        }
+        if(priorityNumber == 3) {
+            Toast.makeText(this, "Calling Plumber", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981225555");
+        }
+        if(priorityNumber == 2) {
+            Toast.makeText(this, "Calling Electrician", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981226666");
+        }
+        if(priorityNumber == 1) {
+            Toast.makeText(this, "Calling Carpenter", Toast.LENGTH_LONG)
+                    .show();
+            u = Uri.parse("tel:9981227777");
+        }
+
+        // Create the intent and set the data for the
+        // intent as the phone number.
+        Intent i = new Intent(Intent.ACTION_DIAL, u);
+
+        try
+        {
+
+            startActivity(i);
+        }
+        catch (SecurityException s)
+        {
+
+            Toast.makeText(this, "An error occurred", Toast.LENGTH_LONG)
+                    .show();
+        }
     }
 
     @Override
@@ -137,15 +193,21 @@ public class AddEditRepairActivity extends AppCompatActivity {
             case R.id.save_repair:
                 saveRepair();
                 return true;
+            case R.id.share_repair:
+                shareRepair();
+                return true;
+            case R.id.call_repair:
+                callRepair();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    public void share_note(View view) {
+    public void shareRepair() {
 
-        editTextTitle = findViewById(R.id.edit_text_title);
-        editTextDescription = findViewById(R.id.edit_text_Description);
+        editTextTitle = findViewById(R.id.edit_text_title4);
+        editTextDescription = findViewById(R.id.edit_text_Description4);
 
         String titleText = editTextTitle.getText().toString();
         String descriptionText = editTextDescription.getText().toString();
