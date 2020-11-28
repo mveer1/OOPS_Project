@@ -125,7 +125,8 @@ public class verificationpage extends AppCompatActivity {
 
     public boolean checkPhoneNumber(){
         phoneNumber = findViewById(R.id.phone);
-        String phone = phoneNumber.getText().toString();
+        String phone = null;
+        phone = phoneNumber.getText().toString();
 
         return phone.matches("[0-9]*");
     }
