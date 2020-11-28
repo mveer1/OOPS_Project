@@ -58,7 +58,7 @@ public class verificationpage extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
                     state.setVisibility(View.VISIBLE);
                     codePicker.setVisibility(View.GONE);
-                    Resnd.setVisibility(View.GONE);
+                    Resnd.setVisibility(View.VISIBLE);
 
                 }
                 else {
