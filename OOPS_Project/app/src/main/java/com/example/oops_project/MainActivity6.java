@@ -213,14 +213,14 @@ public class MainActivity6 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu, menu);
+        menuInflater.inflate(R.menu.main_menu3, menu);
         sharedPreferences3
                 = getSharedPreferences(
                 "sharedPrefs", MODE_PRIVATE);
         editor3
                 = sharedPreferences3.edit();
 
-        MenuItem searchItem = menu.findItem(R.id.action_search);
+        MenuItem searchItem = menu.findItem(R.id.action_search3);
         SearchView searchView = (SearchView) searchItem.getActionView();
 
 

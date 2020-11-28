@@ -13,9 +13,9 @@
         android:title="Share"
         android:onClick="share"
         app:showAsAction="ifRoom" />
-<!--    <item-->
-<!--        android:id="@+id/share_note"-->
-<!--        android:icon="@drawable/ic_baseline_share_24"-->
-<!--        android:title="Share"-->
-<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/call_repair"
+        android:icon="@drawable/ic_baseline_local_phone_24"
+        android:title="Contact"
+        app:showAsAction="ifRoom" />
 </menu>

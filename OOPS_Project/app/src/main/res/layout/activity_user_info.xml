@@ -11,13 +11,12 @@
         android:id="@+id/user_info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/exo_extrabold"
         android:text="User Info"
         android:textColor="#7E7E7E"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,19 +63,20 @@
 
     <Button
         android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF2B2B"
+        android:layout_width="195dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#FFCC26"
         android:fontFamily="@font/exo"
         android:text="Next"
-        android:textColor="#FFFFFF"
+        android:textColor="#7F7F7F"
+        android:textSize="20sp"
         app:iconTint="#FFFFFF"
         android:onClick="toMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.637" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

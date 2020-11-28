@@ -160,25 +160,4 @@ public class AddEditRepairActivity extends AppCompatActivity {
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
     }
-
-    public void share(View view) {
-
-        editTextTitle = findViewById(R.id.edit_text_title);
-        editTextDescription = findViewById(R.id.edit_text_Description);
-
-        String titleText = editTextTitle.getText().toString();
-        String descriptionText = editTextDescription.getText().toString();
-        String priority = spinnerPriority.getSelectedItem().toString();
-
-        String data = "Title: " + titleText + "\n" + "Description: " + descriptionText + "\n" +
-                "Priority: " + priority;
-
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, data);
-        sendIntent.setType("text/plain");
-
-        Intent shareIntent = Intent.createChooser(sendIntent, null);
-        startActivity(shareIntent);
-    }
 }

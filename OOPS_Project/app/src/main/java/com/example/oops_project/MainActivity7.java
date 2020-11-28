@@ -35,7 +35,7 @@ public class MainActivity7 extends AppCompatActivity {
 
     public static final int Add_Note_Request4 = 1;
     public static final int Edit_Note_Request4 = 2;
-    private RepairViewModel noteViewModel3;
+    private RepairViewModel noteViewModel4;
     private List<Repair> completeList4;
     RecyclerView recyclerView4;
     RepairAdapter adapter4;
@@ -67,8 +67,8 @@ public class MainActivity7 extends AppCompatActivity {
 
         builder4 = new MaterialAlertDialogBuilder(
                 new ContextThemeWrapper(this, R.style.AlertDialogCustom));
-        noteViewModel3 = ViewModelProviders.of(this).get(RepairViewModel.class);
-        noteViewModel3.getAllRepairs().observe(this, new Observer<List<Repair>>() {
+        noteViewModel4 = ViewModelProviders.of(this).get(RepairViewModel.class);
+        noteViewModel4.getAllRepairs().observe(this, new Observer<List<Repair>>() {
             @Override
             public void onChanged(@Nullable List<Repair> notes4) {
                 adapter4.submitList(notes4);
@@ -96,7 +96,7 @@ public class MainActivity7 extends AppCompatActivity {
                                             @Override
                                             public void onClick(View view) {
                                                 int mAdapterPosition = viewHolder.getAdapterPosition();
-                                                noteViewModel3.insert(mNote);
+                                                noteViewModel4.insert(mNote);
                                             }
                                         });
 
@@ -108,7 +108,7 @@ public class MainActivity7 extends AppCompatActivity {
                                 snackBarView.setBackground(getResources().getDrawable(R.drawable.snackbar_shape));
                                 snackbar.show();
 
-                                noteViewModel3.delete(adapter4.getRepairAt(viewHolder.getAdapterPosition()));
+                                noteViewModel4.delete(adapter4.getRepairAt(viewHolder.getAdapterPosition()));
                                 dialog.cancel();
                             }
                         })
@@ -181,7 +181,7 @@ public class MainActivity7 extends AppCompatActivity {
             }
 
             Repair note = new Repair(title, description, priority, priorityNumber, date, time);
-            noteViewModel3.insert(note);
+            noteViewModel4.insert(note);
             Toast.makeText(this, "Repair saved successfully!", Toast.LENGTH_SHORT).show();
         } else if (requestCode == Edit_Note_Request4 && resultCode == RESULT_OK) {
             int id = data.getIntExtra(AddEditTodoActivity.EXTRA_ID, -1);
@@ -208,7 +208,7 @@ public class MainActivity7 extends AppCompatActivity {
             }
             Repair note = new Repair(title, description, priority, priorityNumber, date, time);
             note.setId(id);
-            noteViewModel3.update(note);
+            noteViewModel4.update(note);
 
             Toast.makeText(this, "Repair updated Successfully", Toast.LENGTH_SHORT).show();
         } else {
@@ -219,14 +219,14 @@ public class MainActivity7 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu, menu);
+        menuInflater.inflate(R.menu.main_menu4, menu);
         sharedPreferences4
                 = getSharedPreferences(
                 "sharedPrefs", MODE_PRIVATE);
         editor4
                 = sharedPreferences4.edit();
 
-        MenuItem searchItem = menu.findItem(R.id.action_search);
+        MenuItem searchItem = menu.findItem(R.id.action_search4);
         SearchView searchView = (SearchView) searchItem.getActionView();
 
 
@@ -244,7 +244,7 @@ public class MainActivity7 extends AppCompatActivity {
             private void getRepairFromDb(String searchText) {
                 searchText = "%" + searchText + "%";
 
-                noteViewModel3.getSearchedRepairs(searchText).observe(MainActivity7.this, new Observer<List<Repair>>() {
+                noteViewModel4.getSearchedRepairs(searchText).observe(MainActivity7.this, new Observer<List<Repair>>() {
                     @Override
                     public void onChanged(List<Repair> notes) {
                         if (notes == null) {
@@ -273,7 +273,7 @@ public class MainActivity7 extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.delete_all_notes3:
-                noteViewModel3.deleteAllRepairs();
+                noteViewModel4.deleteAllRepairs();
                 Toast.makeText(this, "All Repair Deleted!", Toast.LENGTH_SHORT).show();
                 return true;
             default:

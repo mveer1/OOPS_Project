@@ -30,6 +30,7 @@
         android:fontFamily="@font/exo_medium"
         android:onClick="to_login"
         android:text="Login"
+        android:textColor="#7F7F7F"
         android:textSize="18sp"
         app:backgroundTint="#ffcc26"
         app:layout_constraintBottom_toBottomOf="parent"
