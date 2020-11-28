@@ -24,6 +24,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -31,15 +32,23 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    public static final String TAG = "TAG";
     GoogleSignInClient mGoogleSignInClient;
     SignInButton signInButton;
     FirebaseAuth mAuth;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
     String email, password, confirm_password, profession, contact, username;
+    FirebaseFirestore fStore = FirebaseFirestore.getInstance();
+    String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +75,21 @@ public class MainActivity2 extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Log.d("Login", "Success");
                 Toast.makeText(getApplicationContext(), "Signed in", Toast.LENGTH_SHORT);
-                handleFacebookAccessToken(loginResult.getAccessToken());
+                userId = mAuth.getCurrentUser().getUid();
+                DocumentReference documentReference = fStore.collection("users").document(userId);
+                Map<String,Object> user = new HashMap<>();
+                user.put("fName",username);
+                user.put("email",email);
+                user.put("phone",contact);
+                user.put("profession",profession);
+                user.put("password",password);
+                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                     @Override
+                                                                     public void onSuccess(Void aVoid) {
+                                                                         Log.d(TAG, "onSuccess: user profile is created for "+ username);
+                                                                     }
+                                                                 });
+                        handleFacebookAccessToken(loginResult.getAccessToken());
                 startActivity(new Intent(getApplicationContext(), MainActivity3.class));
             }
 
@@ -234,11 +257,11 @@ public class MainActivity2 extends AppCompatActivity {
 
         if(username==null | email ==null |contact==null |profession==null | password ==null |confirm_password==null){
             Log.w("Login", "Some Fields Null");
-            Toast.makeText(this, "Please Fill all fields", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Please Fill all fields", Toast.LENGTH_SHORT).show();
         }
         else if(password.compareTo(confirm_password) != 0){
             Log.w("Login", "Password Mismatch");
-            Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show();
         }
         else{
             Log.w("Login", "All Fields filled");
