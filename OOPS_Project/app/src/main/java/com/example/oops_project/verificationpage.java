@@ -70,20 +70,6 @@ public class verificationpage extends AppCompatActivity {
                     if(!userOTP.isEmpty() && userOTP.length() == 6){
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, userOTP);
                         verifyAuth(credential);
-                        Bundle extras = getIntent().getExtras();
-                        if(extras != null){
-                            String profession = extras.getString("profession");
-                            if(profession.toLowerCase() == "student"){
-                                startActivity(new Intent(getApplicationContext(), MainActivity6.class));
-                            }else if(profession.toLowerCase() == "homemaker"){
-                                startActivity(new Intent(getApplicationContext(), MainActivity5.class));
-                            }else if(profession.toLowerCase() == "bachelor"){
-                                startActivity(new Intent(getApplicationContext(), MainActivity7.class));
-                            }else{
-                                startActivity(new Intent(getApplicationContext(), MainActivity4.class));
-                            }
-                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
-                        }
                     }
                 }
 
@@ -98,9 +84,22 @@ public class verificationpage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(verificationpage.this, "Authentication is Successful", Toast.LENGTH_SHORT).show();   // this shall take user to the next activity
+                    Toast.makeText(verificationpage.this, "Authentication successful!", Toast.LENGTH_SHORT).show();   // this shall take user to the next activity
+                    Bundle extras = getIntent().getExtras();
+                    if(extras != null){
+                        String profession = extras.getString("profession");
+                        if(profession.toLowerCase() == "student"){
+                            startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+                        }else if(profession.toLowerCase() == "homemaker"){
+                            startActivity(new Intent(getApplicationContext(), MainActivity5.class));
+                        }else if(profession.toLowerCase() == "bachelor"){
+                            startActivity(new Intent(getApplicationContext(), MainActivity7.class));
+                        }else{
+                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
+                        }
+                    }
                 }else{
-                    Toast.makeText(verificationpage.this, "Authentication is Failed", Toast.LENGTH_SHORT).show();       // this shall take user back
+                    Toast.makeText(verificationpage.this, "Authentication failed!", Toast.LENGTH_SHORT).show();       // this shall take user back
                 }
             }
         });
