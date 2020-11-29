@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -32,9 +34,17 @@
             android:value="false" />
 
         <activity
+
+            android:name=".ui.Alarm_Reminder"
+            android:label="@string/title_activity_alarm__reminder">
+
+        </activity>
+        <receiver android:name=".ui.Alarm_Receiver"/>
+
             android:name=".MyAccount"
             android:label="@string/title_activity_my_account">
         </activity>
+
         <activity
             android:name=".MainActivity7"
             android:label="Repairs">
@@ -64,6 +74,8 @@
         <activity
             android:name=".MainActivity4"
             android:label="Notes">
+
+
         </activity>
         <activity
             android:name=".MainActivity3"
