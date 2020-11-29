@@ -52,7 +52,11 @@
     <string name="title_activity_main6">MainActivity6</string>
     <string name="title_activity_main7">MainActivity7</string>
 
+    <string name="title_activity_alarm__reminder">Alarm_Reminder</string>
+
+
 <!--     <string name="title_activity_main8">MainActivity8</string> -->
     <string name="title_activity_my_account">MyAccount</string>
+
 
 </resources>

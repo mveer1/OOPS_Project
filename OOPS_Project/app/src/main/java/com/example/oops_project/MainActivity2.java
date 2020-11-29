@@ -78,7 +78,7 @@ public class MainActivity2 extends AppCompatActivity {
                 userId = mAuth.getCurrentUser().getUid();
                 DocumentReference documentReference = fStore.collection("users").document(userId);
                 Map<String,Object> user = new HashMap<>();
-                user.put("fName",username);
+                user.put("username",username);
                 user.put("email",email);
                 user.put("phone",contact);
                 user.put("profession",profession);
