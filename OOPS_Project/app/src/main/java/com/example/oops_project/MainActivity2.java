@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.InetAddresses;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,8 @@ public class MainActivity2 extends AppCompatActivity {
     FirebaseAuth mAuth;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
-    String email, password, confirm_password, profession, contact, username;
+    String email, password, confirm_password, contact, username;
+    public String profession;
     FirebaseFirestore fStore = FirebaseFirestore.getInstance();
     String userId;
 
@@ -279,7 +281,9 @@ public class MainActivity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(getApplicationContext(),verificationpage.class));
+                            Intent intent = new Intent(getApplicationContext(), verificationpage.class);
+                            intent.putExtra("profession", profession);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Error", "createUserWithEmail:failure", task.getException());

@@ -19,7 +19,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class user_info extends AppCompatActivity {
 
-    EditText contact;
+    EditText contact, job;
+    public String profession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +47,17 @@ public class user_info extends AppCompatActivity {
 
     public void toMain(View view) {
 
+
+        job = findViewById(R.id.editTextProfession);
+
+        profession = job.getText().toString();
+
         contact = findViewById(R.id.editTextPhone);
         String number = contact.getText().toString();
         if(number.length()==10 && number.matches("[0-9]*")){
-            startActivity(new Intent(getApplicationContext(), verificationpage.class));
+            Intent intent = new Intent(getApplicationContext(), verificationpage.class);
+            intent.putExtra("profession", profession);
+            startActivity(intent);
         }else{
             Log.d("User_info", "Invalid Phone Number");
             Toast.makeText(getApplicationContext(), "Invalid Phone Number", Toast.LENGTH_SHORT)

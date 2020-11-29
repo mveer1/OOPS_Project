@@ -70,6 +70,20 @@ public class verificationpage extends AppCompatActivity {
                     if(!userOTP.isEmpty() && userOTP.length() == 6){
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, userOTP);
                         verifyAuth(credential);
+                        Bundle extras = getIntent().getExtras();
+                        if(extras != null){
+                            String profession = extras.getString("profession");
+
+                            if(profession.toLowerCase() == "student"){
+                                startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+                            }else if(profession.toLowerCase() == "homemaker"){
+                                startActivity(new Intent(getApplicationContext(), MainActivity5.class));
+                            }else if(profession.toLowerCase() == "bachelor"){
+                                startActivity(new Intent(getApplicationContext(), MainActivity7.class));
+                            }else{
+                                startActivity(new Intent(getApplicationContext(), MainActivity4.class));
+                            }
+                        }
                         startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                     }
                 }
