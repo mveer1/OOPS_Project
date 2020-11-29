@@ -1,6 +1,8 @@
 package com.example.oops_project;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -20,7 +22,6 @@ public class MyAccount extends AppCompatActivity {
     FirebaseAuth fAuth;
     String userId;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class MyAccount extends AppCompatActivity {
         pr = (TextView) findViewById(R.id.profession);
 
         userId = fAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = fStore.collection("users").document(userId);
+        DocumentReference documentReference = fStore.collection("users").document("ctJ2NkxpnrGDWnSYLMW5");
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -45,4 +46,10 @@ public class MyAccount extends AppCompatActivity {
             }
         });
     }
+        public void logout_user(View view) {
+
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+        }
 }

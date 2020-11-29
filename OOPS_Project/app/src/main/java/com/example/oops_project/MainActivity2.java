@@ -75,21 +75,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Log.d("Login", "Success");
                 Toast.makeText(getApplicationContext(), "Signed in", Toast.LENGTH_SHORT);
-                userId = mAuth.getCurrentUser().getUid();
-                DocumentReference documentReference = fStore.collection("users").document(userId);
-                Map<String,Object> user = new HashMap<>();
-                user.put("username",username);
-                user.put("email",email);
-                user.put("phone",contact);
-                user.put("profession",profession);
-                user.put("password",password);
-                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                                     @Override
-                                                                     public void onSuccess(Void aVoid) {
-                                                                         Log.d(TAG, "onSuccess: user profile is created for "+ username);
-                                                                     }
-                                                                 });
-                        handleFacebookAccessToken(loginResult.getAccessToken());
+                handleFacebookAccessToken(loginResult.getAccessToken());
             }
 
             @Override
@@ -278,7 +264,20 @@ public class MainActivity2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            userId = mAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("users").document(userId);
+                            Map<String,Object> user = new HashMap<>();
+                            user.put("username",username);
+                            user.put("email",email);
+                            user.put("phone",contact);
+                            user.put("profession",profession);
+                            user.put("password",password);
+                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d(TAG, "onSuccess: user profile is created for "+ username);
+                                }
+                            });
                             startActivity(new Intent(getApplicationContext(),verificationpage.class));
                         } else {
                             // If sign in fails, display a message to the user.
