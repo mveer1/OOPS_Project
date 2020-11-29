@@ -81,18 +81,20 @@ public class MainActivity3 extends AppCompatActivity {
         switch(id){
             case R.id.nav_notes:
                 startActivity(new Intent(getApplicationContext(), MainActivity4.class));
-                break;
+                return true;
+
             case R.id.maintainance:
                 startActivity(new Intent(getApplicationContext(), MainActivity7.class));
-                break;
+                return true;
             case R.id.nav_contactUs:
                 startActivity(new Intent(getApplicationContext(), aboutus.class));
-                break;
+                return true;
             case R.id.nav_stocks:
                 startActivity(new Intent(getApplicationContext(), MainActivity5.class));
-                break;
+                return true;
             case R.id.nav_todo:
                 startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
 

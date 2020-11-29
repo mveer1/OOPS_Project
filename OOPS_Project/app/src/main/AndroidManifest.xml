@@ -3,7 +3,10 @@
     package="com.example.oops_project">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -29,13 +32,8 @@
             android:value="false" />
 
         <activity
-
-<!--             android:name=".MainActivity8"
-            android:label="@string/title_activity_main8"> -->
-
             android:name=".MyAccount"
             android:label="@string/title_activity_my_account">
-
         </activity>
         <activity
             android:name=".MainActivity7"
@@ -46,12 +44,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity7"
-            android:label="Repairs">
 
         </activity>
+        <activity
+            android:name=".MainActivity8"
+            android:label="AboutUs">
+
+        </activity>
+
         <activity
             android:name=".MainActivity6"
             android:label="Todos">
@@ -64,17 +64,11 @@
         <activity
             android:name=".MainActivity4"
             android:label="Notes">
-
         </activity>
         <activity
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3"
             android:theme="@style/Theme.OOPS_Project.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".verificationpage"> <!-- <activity -->
             android:name=".verificationpage"
@@ -104,6 +98,18 @@
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -116,6 +122,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
