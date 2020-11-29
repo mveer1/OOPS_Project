@@ -43,17 +43,15 @@
         <activity
             android:name=".MyAccount"
             android:label="@string/title_activity_my_account">
+
+
         </activity>
 
         <activity
             android:name=".MainActivity7"
             android:label="Repairs">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity

@@ -19,8 +19,7 @@ public class MyAccount extends AppCompatActivity {
     TextView un, ph, em, pr;
     FirebaseAuth fAuth;
     String userId;
-    int i = 1;
-    String s= getString(i);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
