@@ -24,6 +24,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.oops_project.ui.Alarm_Receiver;
+import com.example.oops_project.ui.Alarm_Reminder;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -277,6 +279,9 @@ public class MainActivity6 extends AppCompatActivity {
                 goto_myact3();
                 return true;
 
+
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -332,5 +337,7 @@ public class MainActivity6 extends AppCompatActivity {
     public void goto_myact3() {
         startActivity(new Intent(getApplicationContext(),MyAccount.class));
     }
+
+
 
 }

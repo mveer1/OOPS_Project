@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.oops_project.ui.Alarm_Receiver;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
@@ -158,10 +159,12 @@ public class AddEditStockActivity extends AppCompatActivity {
             case R.id.share_stock:
                 shareStock();
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
 }

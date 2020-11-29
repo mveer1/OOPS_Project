@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
-    <uses-feature android:name="android.hardware.type.watch" />
+
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,7 +40,7 @@
 
         </activity>
         <receiver android:name=".ui.Alarm_Receiver"/>
-
+        <activity
             android:name=".MyAccount"
             android:label="@string/title_activity_my_account">
         </activity>
@@ -82,7 +82,8 @@
             android:label="@string/title_activity_main3"
             android:theme="@style/Theme.OOPS_Project.NoActionBar">
         </activity>
-        <activity android:name=".verificationpage"> <!-- <activity -->
+        <activity
+            android:name=".verificationpage"> <!-- <activity -->
             android:name=".verificationpage"
             android:label="@string/title_activity_verification">
 
@@ -120,6 +121,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
+
 
 
         <activity
