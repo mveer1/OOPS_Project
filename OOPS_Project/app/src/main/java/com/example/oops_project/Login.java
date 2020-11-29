@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     CallbackManager mCallbackManager;
     LoginButton loginButton;
+    Button log_in;
     EditText t1, t2;
     String email, password;
 
@@ -52,14 +54,20 @@ public class Login extends AppCompatActivity {
         //User Email/Password
         t1 = (EditText)findViewById(R.id.editTextTextPersonName2);
         t2 = (EditText)findViewById(R.id.editTextTextPassword);
+        log_in = findViewById(R.id.login_page_button);
+        log_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signInEmail(email, password);
+            }
+        });
 
         email = t1.getText().toString();
         password = t2.getText().toString();
+        mAuth = FirebaseAuth.getInstance();
 
 
         createRequest();
-
-
 
         findViewById(R.id.google_login_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +75,7 @@ public class Login extends AppCompatActivity {
                 signIn();
             }
         });
-        mAuth = FirebaseAuth.getInstance();
+
 
         //FACEBOOK
 //        FacebookSdk.sdkInitialize(getApplicationContext());
@@ -80,7 +88,7 @@ public class Login extends AppCompatActivity {
                 Log.d("Login", "Success");
                 Toast.makeText(getApplicationContext(), "Signed in", Toast.LENGTH_SHORT);
                 handleFacebookAccessToken(loginResult.getAccessToken());
-                startActivity(new Intent(Login.this, MainActivity3.class));
+                startActivity(new Intent(Login.this, MainActivity4.class));
             }
 
             @Override
@@ -185,12 +193,6 @@ public class Login extends AppCompatActivity {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
 
-        if(user!=null){
-            Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
-            startActivity(intent);
-        }else if(!isLoggedIn){
-            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
-        }
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
@@ -203,7 +205,7 @@ public class Login extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Message", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(getApplicationContext(), MainActivity3.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Message", "signInWithCredential:failure", task.getException());
@@ -223,8 +225,7 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Login", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
+                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Error", "signInWithEmail:failure", task.getException());
@@ -236,7 +237,4 @@ public class Login extends AppCompatActivity {
                 });
     }
 
-    public void login_user(View view) {
-        signInEmail(email, password);
-    }
 }               

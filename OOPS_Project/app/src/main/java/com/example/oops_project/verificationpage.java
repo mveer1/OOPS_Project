@@ -85,19 +85,19 @@ public class verificationpage extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(verificationpage.this, "Authentication successful!", Toast.LENGTH_SHORT).show();   // this shall take user to the next activity
-                    Bundle extras = getIntent().getExtras();
-                    if(extras != null){
-                        String profession = extras.getString("profession");
-                        if(profession.toLowerCase() == "student"){
-                            startActivity(new Intent(getApplicationContext(), MainActivity6.class));
-                        }else if(profession.toLowerCase() == "homemaker"){
-                            startActivity(new Intent(getApplicationContext(), MainActivity5.class));
-                        }else if(profession.toLowerCase() == "bachelor"){
-                            startActivity(new Intent(getApplicationContext(), MainActivity7.class));
-                        }else{
-                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
-                        }
-                    }
+//                    Bundle extras = getIntent().getExtras();
+//                    if(extras != null){
+//                        String profession = extras.getString("profession");
+//                        if(profession.toLowerCase() == "student"){
+//                            startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+//                        }else if(profession.toLowerCase() == "homemaker"){
+//                            startActivity(new Intent(getApplicationContext(), MainActivity5.class));
+//                        }else if(profession.toLowerCase() == "bachelor"){
+//                            startActivity(new Intent(getApplicationContext(), MainActivity7.class));
+//                        }else{
+//                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
+//                        }
+//                    }
                 }else{
                     Toast.makeText(verificationpage.this, "Authentication failed!", Toast.LENGTH_SHORT).show();       // this shall take user back
                 }
@@ -117,6 +117,7 @@ public class verificationpage extends AppCompatActivity {
                 token = forceResendingToken;
                 nextBtn.setText("Verify");
                 verificationInProgress = true;
+
             }
 
             @Override
@@ -126,6 +127,7 @@ public class verificationpage extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                startActivity(new Intent(getApplicationContext(), MainActivity4.class));
             }
 
             @Override

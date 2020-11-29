@@ -172,7 +172,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         FirebaseUser user = mAuth.getCurrentUser();
         if(user!=null){
-            Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity4.class);
             startActivity(intent);
         }
     }
@@ -219,9 +219,9 @@ public class MainActivity2 extends AppCompatActivity {
                 });
     }
 
-    public void login_user(View view) {
-        signInEmail(email, password);
-    }
+//    public void login_user(View view) {
+//        signInEmail(email, password);
+//    }
 
     public void getUserData(){
 

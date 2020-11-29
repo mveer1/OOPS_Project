@@ -17,7 +17,7 @@
         android:drawableTint="#7E7E7E"
         android:ems="10"
         android:fontFamily="@font/exo_medium"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
