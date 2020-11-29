@@ -73,7 +73,6 @@ public class verificationpage extends AppCompatActivity {
                         Bundle extras = getIntent().getExtras();
                         if(extras != null){
                             String profession = extras.getString("profession");
-
                             if(profession.toLowerCase() == "student"){
                                 startActivity(new Intent(getApplicationContext(), MainActivity6.class));
                             }else if(profession.toLowerCase() == "homemaker"){
@@ -83,8 +82,8 @@ public class verificationpage extends AppCompatActivity {
                             }else{
                                 startActivity(new Intent(getApplicationContext(), MainActivity4.class));
                             }
+                            startActivity(new Intent(getApplicationContext(), MainActivity4.class));
                         }
-                        startActivity(new Intent(getApplicationContext(), MainActivity3.class));
                     }
                 }
 
