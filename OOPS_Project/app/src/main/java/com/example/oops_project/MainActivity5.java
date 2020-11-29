@@ -275,6 +275,10 @@ public class MainActivity5 extends AppCompatActivity {
             case R.id.button_goto_abtus2:
                 goto_abtus2();
                 return true;
+            case R.id.button_goto_myact2:
+                goto_myact2();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item2);
         }
@@ -326,5 +330,8 @@ public class MainActivity5 extends AppCompatActivity {
     }
     public void goto_abtus2() {
         startActivity(new Intent(getApplicationContext(),MainActivity8.class));
+    }
+    public void goto_myact2() {
+        startActivity(new Intent(getApplicationContext(),MyAccount.class));
     }
 }

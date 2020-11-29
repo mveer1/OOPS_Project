@@ -14,8 +14,12 @@
         android:title="Delete All Repairs"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/button_goto_abtus"
+        android:id="@+id/button_goto_abtus4"
         android:title="AboutUS"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/button_goto_myact4"
+        android:title="My Account"
         app:showAsAction="never"/>
 
 

@@ -276,9 +276,13 @@ public class MainActivity7 extends AppCompatActivity {
                 noteViewModel4.deleteAllRepairs();
                 Toast.makeText(this, "All Repair Deleted!", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.button_goto_abtus:
-                goto_abtus();
+            case R.id.button_goto_abtus4:
+                goto_abtus4();
                 return true;
+            case R.id.button_goto_myact4:
+                goto_myact4();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -329,8 +333,11 @@ public class MainActivity7 extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),MainActivity4.class));
     }
 
-    public void goto_abtus() {
+    public void goto_abtus4() {
         startActivity(new Intent(getApplicationContext(),MainActivity8.class));
+    }
+    public void goto_myact4() {
+        startActivity(new Intent(getApplicationContext(),MyAccount.class));
     }
 
 }
