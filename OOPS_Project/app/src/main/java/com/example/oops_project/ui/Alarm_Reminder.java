@@ -33,7 +33,7 @@ public class Alarm_Reminder extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view)
     {
-        EditText message = findViewById(R.id.message);
+        EditText message = findViewById(R.id.remind);
         TimePicker timePicker=findViewById(R.id.timepicker);
 
         Intent intent=new Intent(Alarm_Reminder.this,Alarm_Receiver.class);

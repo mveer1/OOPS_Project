@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/lightpage"
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".MyAccount"
     tools:deviceIds="wear">
@@ -59,7 +59,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="250dp"
             android:layout_marginTop="520dp"
-            android:text="Logout" />
+            android:text="Logout"
+            android:textColor="#7F7F7F"
+            android:textSize="18sp" />
 
     </FrameLayout>
 </androidx.wear.widget.BoxInsetLayout>

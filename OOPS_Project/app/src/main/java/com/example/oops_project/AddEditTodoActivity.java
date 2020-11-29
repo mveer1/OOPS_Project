@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.oops_project.ui.Alarm_Receiver;
+import com.example.oops_project.ui.Alarm_Reminder;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
@@ -158,9 +160,15 @@ public class AddEditTodoActivity extends AppCompatActivity {
             case R.id.share_todo:
                 shareTodo();
                 return true;
+            case R.id.button_set_alrm:
+                set_alrm();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void set_alrm() {
+        startActivity(new Intent(getApplicationContext(), Alarm_Reminder.class));
     }
 
 

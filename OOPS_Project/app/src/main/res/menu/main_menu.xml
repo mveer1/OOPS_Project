@@ -13,5 +13,13 @@
         android:id="@+id/delete_all_notes"
         android:title="Delete All Notes"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/button_goto_abtus"
+        android:title="AboutUS"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/button_goto_myact"
+        android:title="My Account"
+        app:showAsAction="never"/>
 
 </menu>

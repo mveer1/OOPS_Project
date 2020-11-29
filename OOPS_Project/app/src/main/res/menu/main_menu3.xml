@@ -13,5 +13,15 @@
         android:id="@+id/delete_all_notes3"
         android:title="Delete All Todos"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/button_goto_abtus3"
+        android:title="AboutUS"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/button_goto_myact3"
+        android:title="My Account"
+        app:showAsAction="never"/>
+
+
 
 </menu>
