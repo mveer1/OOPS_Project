@@ -276,7 +276,11 @@ public class MainActivity4 extends AppCompatActivity {
                 noteViewModel.deleteAllNotes();
                 Toast.makeText(this, "All Notes Deleted!", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.button_goto_abtus:
+                goto_abtus();
+                return true;
             default:
+
                 return super.onOptionsItemSelected(item);
         }
     }
@@ -327,5 +331,8 @@ public class MainActivity4 extends AppCompatActivity {
 
     public void goto_note54(View view) {
         startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+    public void goto_abtus() {
+        startActivity(new Intent(getApplicationContext(),MainActivity8.class));
     }
 }

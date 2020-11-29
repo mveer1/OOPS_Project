@@ -14,9 +14,8 @@
         android:title="Delete All Todos"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/button_goto_abtus"
+        android:id="@+id/button_goto_abtus3"
         android:title="AboutUS"
-        android:onClick="goto_abtus"
         app:showAsAction="never"/>
 
 </menu>

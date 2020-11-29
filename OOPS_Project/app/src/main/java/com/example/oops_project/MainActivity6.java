@@ -270,9 +270,60 @@ public class MainActivity6 extends AppCompatActivity {
                 noteViewModel3.deleteAllTodos();
                 Toast.makeText(this, "All Todo Deleted!", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.button_goto_abtus3:
+                goto_abtus3();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+        public void goto_todo76(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+    public void goto_stock75(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+    public void goto_note74(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_todo46(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair47(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock45(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_note64(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_repair67(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock65(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_todo56(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair57(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_note54(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+    public void goto_abtus3() {
+        startActivity(new Intent(getApplicationContext(),MainActivity8.class));
     }
 
 }

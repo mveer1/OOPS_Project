@@ -16,7 +16,6 @@
     <item
         android:id="@+id/button_goto_abtus"
         android:title="AboutUS"
-        android:onClick="goto_abtus"
         app:showAsAction="never"/>
 
 </menu>

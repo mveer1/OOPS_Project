@@ -276,6 +276,9 @@ public class MainActivity7 extends AppCompatActivity {
                 noteViewModel4.deleteAllRepairs();
                 Toast.makeText(this, "All Repair Deleted!", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.button_goto_abtus:
+                goto_abtus();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -290,7 +293,44 @@ public class MainActivity7 extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),MainActivity4.class));
     }
 
-    public void goto_abtus(MenuItem item) {
+    public void goto_todo46(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair47(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock45(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_note64(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_repair67(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_stock65(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+    }
+
+    public void goto_todo56(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity6.class));
+    }
+
+    public void goto_repair57(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity7.class));
+    }
+
+    public void goto_note54(View view) {
+        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+    }
+
+    public void goto_abtus() {
         startActivity(new Intent(getApplicationContext(),MainActivity8.class));
     }
+
 }
