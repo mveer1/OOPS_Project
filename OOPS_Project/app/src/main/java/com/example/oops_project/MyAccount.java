@@ -21,8 +21,6 @@ public class MyAccount extends AppCompatActivity {
     TextView un, ph, em, pr;
     FirebaseAuth fAuth;
     String userId;
-    int i = 1;
-    String s= getString(i);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +35,7 @@ public class MyAccount extends AppCompatActivity {
         pr = (TextView) findViewById(R.id.profession);
 
         userId = fAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = fStore.collection("users").document(userId);
+        DocumentReference documentReference = fStore.collection("users").document("ctJ2NkxpnrGDWnSYLMW5");
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -48,11 +46,10 @@ public class MyAccount extends AppCompatActivity {
             }
         });
     }
+        public void logout_user(View view) {
 
-    public void logout_user(View view) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
-    }
+        }
 }

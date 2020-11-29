@@ -16,11 +16,13 @@
 
         <TextView
             android:id="@+id/profession"
-            android:layout_width="367dp"
-            android:layout_height="77dp"
+            android:layout_width="363dp"
+            android:layout_height="85dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="200dp"
-            android:text="profession" />
+            android:fontFamily="@font/exo_medium"
+            android:text="profession"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/phone"
@@ -28,12 +30,14 @@
             android:layout_height="77dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="400dp"
-            android:text="phone" />
+            android:fontFamily="@font/exo_medium"
+            android:text="phone"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="164dp"
-            android:layout_height="169dp"
+            android:layout_width="177dp"
+            android:layout_height="174dp"
             android:background="#FFFFFF"
             android:src="@mipmap/ic_launcher" />
 
@@ -43,21 +47,25 @@
             android:layout_height="77dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="300dp"
-            android:text="email" />
+            android:fontFamily="@font/exo_medium"
+            android:text="email"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/username"
-            android:layout_width="153dp"
-            android:layout_height="81dp"
+            android:layout_width="169dp"
+            android:layout_height="88dp"
             android:layout_marginStart="200dp"
             android:layout_marginTop="70dp"
-            android:text="Username" />
+            android:fontFamily="@font/exo_medium"
+            android:text="Username"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="250dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="520dp"
             android:text="Logout"
             android:onClick="logout_user"
