@@ -16,10 +16,46 @@
         tools:listitem="@layout/note_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_add_note3"
+        android:id="@+id/button_goto_note64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center|center_vertical"
+        android:layout_margin="32dp"
+        app:backgroundTint="#ff2b2b"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/ic_baseline_sticky_note_2_24"
+        android:onClick="goto_note64"
+        app:tint="#ffffff" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_goto_repair67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="32dp"
+        app:backgroundTint="#ff2b2b"
+        app:borderWidth="0dp"
+        android:onClick="goto_repair67"
+        app:srcCompat="@drawable/ic_baseline_home_repair_service_24"
+        app:tint="#ffffff" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_goto_stock65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
+        android:layout_margin="32dp"
+        app:backgroundTint="#ff2b2b"
+        app:borderWidth="0dp"
+        android:onClick="goto_stock65"
+        app:srcCompat="@drawable/ic_baseline_local_grocery_store_24"
+        app:tint="#ffffff" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_note3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="clip_horizontal|end"
         android:layout_margin="32dp"
         app:backgroundTint="#ff2b2b"
         app:borderWidth="0dp"

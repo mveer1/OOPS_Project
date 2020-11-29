@@ -28,13 +28,17 @@
             android:id="@+id/B1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SET" />
+            android:fontFamily="@font/exo"
+            android:text="SET"
+            android:textColor="#7F7F7F" />
 
         <Button
             android:id="@+id/B2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CANCEL" />
+            android:fontFamily="@font/exo"
+            android:text="CANCEL"
+            android:textColor="#7F7F7F" />
 
 
     </LinearLayout>
