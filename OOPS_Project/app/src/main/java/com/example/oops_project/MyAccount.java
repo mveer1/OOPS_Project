@@ -19,6 +19,8 @@ public class MyAccount extends AppCompatActivity {
     TextView un, ph, em, pr;
     FirebaseAuth fAuth;
     String userId;
+    int i = 1;
+    String s= getString(i);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +39,10 @@ public class MyAccount extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                un.setText(DocumentSnapshot.getString("username"));
-                ph.setText(DocumentSnapshot.getString("phone"));
-                em.setText(DocumentSnapshot.getString("email"));
-                pr.setText(DocumentSnapshot.getString("profession"));
-
+                un.setText(value.getString("username"));
+                ph.setText(value.getString("phone"));
+                em.setText(value.getString("email"));
+                pr.setText(value.getString("profession"));
             }
         });
     }
