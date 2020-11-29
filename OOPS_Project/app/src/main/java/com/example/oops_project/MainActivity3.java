@@ -25,35 +25,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity3 extends AppCompatActivity {
 
-    RecyclerView myRecyclerView;
 
-    String s1[],s2[];
-    int image[]={R.drawable.logo2,R.drawable.logo2,R.drawable.logo2,R.drawable.logo2};
 
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TextView link;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
-        s1=getResources().getStringArray(R.array.team);
-        s2=getResources().getStringArray(R.array.teamid);
-        myRecyclerView=findViewById(R.id.myRecyclerView);
 
-        //link = findViewById(R.id.textView12);
-        //link.setMovementMethod(LinkMovementMethod.getInstance());
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+
+
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -66,9 +56,7 @@ public class MainActivity3 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        recycleAdapter RecycleAdapter=new recycleAdapter(this,s1,s2,image);
-        myRecyclerView.setAdapter(RecycleAdapter);
-        myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     @Override
@@ -93,18 +81,20 @@ public class MainActivity3 extends AppCompatActivity {
         switch(id){
             case R.id.nav_notes:
                 startActivity(new Intent(getApplicationContext(), MainActivity4.class));
-                break;
+                return true;
+
             case R.id.maintainance:
-                startActivity(new Intent(getApplicationContext(), maintainance.class));
-                break;
+                startActivity(new Intent(getApplicationContext(), MainActivity7.class));
+                return true;
             case R.id.nav_contactUs:
                 startActivity(new Intent(getApplicationContext(), aboutus.class));
-                break;
+                return true;
             case R.id.nav_stocks:
                 startActivity(new Intent(getApplicationContext(), MainActivity5.class));
-                break;
+                return true;
             case R.id.nav_todo:
                 startActivity(new Intent(getApplicationContext(), MainActivity6.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
 

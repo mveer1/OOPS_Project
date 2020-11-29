@@ -1,10 +1,20 @@
 package com.example.oops_project;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.provider.MediaStore;
+
 import androidx.room.PrimaryKey;
 import androidx.room.Entity;
 
+import static android.app.Activity.RESULT_OK;
+
 @Entity(tableName = "repair_table")
 public class Repair {
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -23,6 +33,7 @@ public class Repair {
         this.date = date;
         this.time = time;
     }
+
 
     public int getId() {
         return id;

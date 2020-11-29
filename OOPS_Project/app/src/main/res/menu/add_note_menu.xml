@@ -10,7 +10,6 @@
     <item
         android:id="@+id/share_note"
         android:icon="@drawable/ic_baseline_share_24"
-        android:onClick="share"
         android:title="Share"
         app:showAsAction="ifRoom" />
 </menu>

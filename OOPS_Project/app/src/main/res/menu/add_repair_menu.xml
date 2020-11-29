@@ -11,11 +11,22 @@
         android:id="@+id/share_repair"
         android:icon="@drawable/ic_baseline_share_24"
         android:title="Share"
-        android:onClick="share"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/call_repair"
         android:icon="@drawable/ic_baseline_local_phone_24"
         android:title="Contact"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/click_photo"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Camera"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/share_photo"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Share"
         app:showAsAction="ifRoom" />
 </menu>
