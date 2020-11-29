@@ -35,7 +35,7 @@ public class MyAccount extends AppCompatActivity {
         pr = (TextView) findViewById(R.id.profession);
 
         userId = fAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = fStore.collection("users").document("ctJ2NkxpnrGDWnSYLMW5");
+        DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
